@@ -14,7 +14,7 @@ public_folder: /img
 collections:
   - name: "product"
     label: "Product"
-    folder: "src/pages/products"
+    folder: "content/products"
     create: true
     slug: "index"
     media_folder: ''
@@ -27,4 +27,18 @@ collections:
       - {label: "Long description", name: "description-long", widget: "markdown"}
       - {label: "Image", name: "image", widget: image}
       - {label: "Price", name: "price", widget: "number", value_type: "float"}
+  - name: "actions"
+    label: "Action"
+    folder: "content/actions"
+    create: true
+    slug: "index"
+    media_folder: ''
+    public_folder: ''
+    path: '{{name}}/index'
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "action"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Short description", name: "description-short", widget: "text"}
+      - {label: "Long description", name: "description-long", widget: "markdown"}
+      - {label: "Image", name: "image", widget: image}
 
