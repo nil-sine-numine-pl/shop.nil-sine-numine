@@ -15,7 +15,10 @@
     },
     "dependencies": {
         "gatsby": "^2.32.3",
+        "gatsby-plugin-netlify": "^2.11.0",
         "gatsby-plugin-netlify-cms": "^4.10.0",
+        "gatsby-source-filesystem": "^2.11.1",
+        "gatsby-source-stripe": "^3.2.2",
         "netlify-cms-app": "^2.14.25",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"

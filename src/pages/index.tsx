@@ -1,11 +1,13 @@
 import React from "react"
-import { PageProps } from "gatsby"
+import Layout from "../components/layout"
 
-export default function IndexRoute(props: PageProps) {
+export default function IndexRoute() {
   return (
-    <>
-      <h1>Tu będzie strona :)</h1>
-      <p>{props.path}</p>
-    </>
+    <Layout>
+      <h1>Hi! I'm building a shop!</h1>
+      <p>
+        bla
+      </p>
+    </Layout>
   )
 }

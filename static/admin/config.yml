@@ -12,21 +12,23 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "product"
-    label: "Product"
-    folder: "content/products"
-    create: true
-    slug: "index"
-    media_folder: ''
-    public_folder: ''
-    path: '{{name}}/index'
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Short description", name: "description-short", widget: "text"}
-      - {label: "Long description", name: "description-long", widget: "markdown"}
-      - {label: "Image", name: "image", widget: image}
-      - {label: "Price", name: "price", widget: "number", value_type: "float"}
+  - name: "pages"
+    label: "Pages"
+    files: 
+      - file: "content/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "actions"
     label: "Action"
     folder: "content/actions"
