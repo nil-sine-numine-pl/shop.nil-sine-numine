@@ -5,13 +5,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/img`,
-        name: 'pages',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/static/img`,
+    //     name: 'pages',
+    //   },
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
