@@ -1,6 +1,10 @@
 import React from "react"
 import { useStaticQuery, PageProps, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
+import { CartProvider } from "use-shopping-cart"
+import Cart from "./cart"
+import { loadStripe } from '@stripe/stripe-js'
+import Skus from "./skus"
 
 interface Product {
   id: string
@@ -22,6 +26,9 @@ interface Price {
   product: Product
 }
 
+console.log(process.env.STRIPE_PUBLISHABLE_KEY)
+
+const stripePromise = loadStripe(process.env.STRIPE_PUBLISHABLE_KEY)
 
 export default function IndexRoute(props: PageProps) {
   const pricedProducts: Price[] = useStaticQuery(
@@ -49,6 +56,22 @@ export default function IndexRoute(props: PageProps) {
   return (
     <Layout>
       <h1>Tu będzie sklep :)</h1>
+      <CartProvider
+        mode="client-only"
+        stripe={stripePromise}
+        successUrl={`${window.location.origin}/page-2/`}
+        cancelUrl={`${window.location.origin}/`}
+        currency="PLN"
+        allowedCountries={['PL']}
+        billingAddressCollection={true}
+      >
+        <div>
+          <Cart />
+          <Skus />
+        </div>
+      </CartProvider>
+
+
       <ul>
         {pricedProducts.map(pricedProduct =>
           <li>

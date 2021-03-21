@@ -16,6 +16,7 @@
     "dependencies": {
         "@stripe/stripe-js": "^1.13.1",
         "gatsby": "^2.32.3",
+        "gatsby-plugin-env-variables": "^2.0.0",
         "gatsby-plugin-netlify": "^2.11.0",
         "gatsby-plugin-netlify-cms": "^4.10.0",
         "gatsby-source-filesystem": "^2.11.1",

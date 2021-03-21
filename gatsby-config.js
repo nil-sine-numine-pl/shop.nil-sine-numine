@@ -27,6 +27,12 @@ module.exports = {
         downloadFiles: true,
       }
     },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ["STRIPE_SECRET", "STRIPE_PUBLISHABLE_KEY"]
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
