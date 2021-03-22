@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CSS from 'csstype';
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart'
 
@@ -25,26 +25,26 @@ const buttonStyles: CSS.Properties = {
     borderRadius: '6px',
     letterSpacing: '1.5px',
 }
+const imageStyles: CSS.Properties = {
+    maxWidth: '175px'
+}
 
-const SkuCard = ({ sku }) => {
+export default ({ product }) => {
     const { addItem } = useShoppingCart()
-
     return (
         <div style={cardStyles}>
-            <img src={sku.image} alt="" />
-            <h4>{sku.name}</h4>
+            <img style={imageStyles} src={product.image} alt="" />
+            <h4>{product.name}</h4>
             <p>
                 Price:{' '}
                 {formatCurrencyString({
-                    value: parseInt(sku.price),
-                    currency: sku.currency,
+                    value: parseInt(product.price),
+                    currency: product.currency,
                 })}
             </p>
-            <button style={buttonStyles} onClick={() => addItem(sku, 2)}>
+            <button style={buttonStyles} onClick={() => addItem(product)}>
                 ADD TO CART
       </button>
         </div>
     )
 }
-
-export default SkuCard
