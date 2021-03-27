@@ -19,7 +19,6 @@ export default function Layout({ children }) {
           <ListLink to="/shop/">Sklep</ListLink>
           <ListLink to="/blog/">Blog</ListLink>
           <ListLink to="/about/">O nas</ListLink>
-          <ListLink to="/thanks/">O thx</ListLink>
         </ul>
       </header>
       {children}
