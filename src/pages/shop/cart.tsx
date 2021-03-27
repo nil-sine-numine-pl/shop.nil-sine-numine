@@ -24,10 +24,8 @@ const Cart = () => {
     return (
         <div>
             <p>Number of Items: {cart.cartCount}</p>
-            <p>Total: {cart.formattedTotalPrice}</p>
+            <p>Total: {cart.totalPrice}</p>
             <p>A: {cartProducts[0]?.name}</p>
-            <p>{JSON.stringify(cart)}</p>
-
             <button
                 style={buttonStyles}
                 disabled={loading}
