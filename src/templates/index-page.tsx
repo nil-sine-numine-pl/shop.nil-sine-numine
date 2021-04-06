@@ -14,7 +14,7 @@ export default ({ data }) => {
   )
 }
 export const pageQuery = graphql`
-  query AboutPage($id: String!) {
+  query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
