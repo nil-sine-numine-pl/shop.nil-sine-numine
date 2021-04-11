@@ -5,13 +5,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     path: `${__dirname}/static/img`,
-    //     name: 'pages',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'pages',
+      },
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -27,8 +27,8 @@ module.exports = {
         name: 'pages',
       },
     },
-    
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {

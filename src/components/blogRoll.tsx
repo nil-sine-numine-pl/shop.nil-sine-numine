@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-//import PreviewCompatibleImage from './previewCompatibleImage'
+import PreviewCompatibleImage from './previewCompatibleImage'
 
 export function BlogRoll({data}) {
     console.log(data)
@@ -19,12 +19,12 @@ export function BlogRoll({data}) {
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
-                      {/* <PreviewCompatibleImage
+                      <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                         }}
-                      /> */}
+                      />
                     </div>
                   ) : null}
                   <p className="post-meta">
@@ -76,6 +76,13 @@ export default () => {
               description
               templateKey
               date(formatString: "MMMM DD, YYYY")
+              featuredimage {
+                childImageSharp {
+                  fluid(maxWidth: 120, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
