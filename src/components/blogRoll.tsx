@@ -2,23 +2,16 @@ import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import PreviewCompatibleImage from './previewCompatibleImage'
 
-export function BlogRoll({data}) {
-    console.log(data)
-    const { edges: posts } = data.allMarkdownRemark
-
+const BlogRoll = ({posts}) => {
     return (
-      <div className="columns is-multiline">
+      <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
+            <div key={post.id}>
+              <article>
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -27,23 +20,18 @@ export function BlogRoll({data}) {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title is-size-4"
-                      to={post.fields.slug}
-                    >
+                  <p>
+                    <Link to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &nbsp; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                    <span>
+                      &nbsp;{post.frontmatter.date}
                     </span>
                   </p>
                 </header>
                 <p>
                   {post.frontmatter.description}
-                  <br />
-                  <br />
+                  <br /><br />
                   <Link className="button" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
@@ -54,8 +42,6 @@ export function BlogRoll({data}) {
       </div>
     )
   }
-
-
 
 export default () => {
   const data = useStaticQuery(
@@ -88,8 +74,8 @@ export default () => {
         }
       }
     }`
-  )
+  ).allMarkdownRemark.edges
   return (
-    <BlogRoll data={data}/>
+    <BlogRoll posts={data}/>
   )
 }
