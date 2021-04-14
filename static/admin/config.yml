@@ -29,18 +29,17 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-  - name: "actions"
-    label: "Action"
-    folder: "content/actions"
+  - name: "posts"
+    label: "Posts"
+    folder: "src/pages/blog"
     create: true
     slug: "index"
     media_folder: ''
     public_folder: ''
     path: '{{name}}/index'
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "action"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Short description", name: "description-short", widget: "text"}
-      - {label: "Long description", name: "description-long", widget: "markdown"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Short description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Image", name: "image", widget: image}
-
