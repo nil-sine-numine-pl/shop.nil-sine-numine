@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { StaticImage } from 'gatsby-plugin-image'
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -11,7 +11,7 @@ const ListLink = props => (
 export default function Layout({ children }) {
   return (
     <div style={{ margin: `3rem auto`, maxWidth: 800}}>
-      <img src="../../img/logo.png" alt="logo"></img>
+      <StaticImage src="../images/logo.png" alt="" placeholder="blurred"  />
       <header style={{ marginBottom: `1.5rem` }}>
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
           <h3 style={{ display: `inline` }}>MySweetSite</h3>
