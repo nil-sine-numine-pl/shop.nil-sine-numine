@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 
 export const BlogPostTemplate = ({
   content,
@@ -27,13 +26,11 @@ export const BlogPostTemplate = ({
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   return (
-    <Layout>
       <BlogPostTemplate
         content={post.html}
         description={post.frontmatter.description}
         title={post.frontmatter.title}
       />
-    </Layout>
   )
 }
 
