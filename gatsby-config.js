@@ -72,6 +72,7 @@ module.exports = {
         allowList: ["STRIPE_SECRET", "STRIPE_PUBLISHABLE_KEY"]
       },
     },
+    `gatsby-plugin-emotion`,
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

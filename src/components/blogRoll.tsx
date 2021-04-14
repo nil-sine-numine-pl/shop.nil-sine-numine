@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import { GatsbyImage, getImage} from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, StaticImage} from 'gatsby-plugin-image'
 
 const BlogRoll = ({posts}) => {
     return (
@@ -55,7 +55,7 @@ export default () => {
               title
               featuredimage {
                 childImageSharp {
-                  gatsbyImageData(layout: FIXED)
+                  gatsbyImageData(layout: FIXED, placeholder: BLURRED)
                 }
               }
             }
