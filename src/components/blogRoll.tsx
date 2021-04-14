@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import PreviewCompatibleImage from './previewCompatibleImage'
+import { GatsbyImage, getImage} from 'gatsby-plugin-image'
 
 const BlogRoll = ({posts}) => {
     return (
@@ -12,16 +12,11 @@ const BlogRoll = ({posts}) => {
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div>
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
+                      <GatsbyImage image={getImage(post.frontmatter.featuredimage)} alt="alt" />
                     </div>
                   ) : null}
                   <p>
-                    <Link to={post.fields.slug}>
+                    <Link to={post.frontmatter.slug}>
                       {post.frontmatter.title}
                     </Link>
                     <span>
@@ -32,7 +27,7 @@ const BlogRoll = ({posts}) => {
                 <p>
                   {post.frontmatter.description}
                   <br /><br />
-                  <Link className="button" to={post.fields.slug}>
+                  <Link className="button" to={post.frontmatter.slug}>
                     Keep Reading →
                   </Link>
                 </p>
@@ -48,28 +43,23 @@ export default () => {
     graphql`
     query BlogRollQuery {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+        sort: {order: DESC, fields: frontmatter___date}
       ) {
         edges {
           node {
-            id
-            fields {
-              slug
-            }
             frontmatter {
-              title
+              date
               description
-              templateKey
-              date(formatString: "MMMM DD, YYYY")
+              slug
+              title
               featuredimage {
                 childImageSharp {
-                  fluid(maxWidth: 120, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(layout: FIXED)
                 }
               }
             }
+            id
           }
         }
       }

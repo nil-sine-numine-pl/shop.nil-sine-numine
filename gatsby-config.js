@@ -27,6 +27,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
