@@ -10,7 +10,7 @@ const ListLink = props => (
 
 export default function Layout({ children }) {
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+    <div style={{ margin: `3rem auto`, maxWidth: 800}}>
       <img src="../../img/logo.png" alt="logo"></img>
       <header style={{ marginBottom: `1.5rem` }}>
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
