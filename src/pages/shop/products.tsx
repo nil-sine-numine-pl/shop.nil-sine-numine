@@ -34,7 +34,7 @@ export default () => {
   const prices: Price[] = useStaticQuery(
     graphql`
       query {
-        allStripePrice {
+        allStripePrice(filter: {active: {eq: true}}) {
           nodes {
             id
             currency
