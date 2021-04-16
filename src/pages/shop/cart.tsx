@@ -1,18 +1,5 @@
 import React, { useState } from 'react'
-import CSS from 'csstype'
 import { useShoppingCart } from 'use-shopping-cart'
-
-const buttonStyles: CSS.Properties = {
-    fontSize: '13px',
-    textAlign: 'center',
-    color: '#fff',
-    outline: 'none',
-    padding: '12px',
-    boxShadow: '2px 5px 10px rgba(0,0,0,.1)',
-    backgroundColor: 'rgb(255, 178, 56)',
-    borderRadius: '6px',
-    letterSpacing: '1.5px',
-}
 
 const Cart = () => {
     const [loading, setLoading] = useState(false)
@@ -27,7 +14,6 @@ const Cart = () => {
             <p>Total: {cart.totalPrice}</p>
             <p>A: {cartProducts[0]?.name}</p>
             <button
-                style={buttonStyles}
                 disabled={loading}
                 onClick={() => {
                     setLoading(true)
@@ -36,7 +22,7 @@ const Cart = () => {
             >
                 {loading ? 'Loading...' : 'Checkout'}
             </button>
-            <button style={buttonStyles} onClick={cart.clearCart}>
+            <button onClick={cart.clearCart}>
                 Clear cart
       </button>
         </div>

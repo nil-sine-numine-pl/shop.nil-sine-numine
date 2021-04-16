@@ -1,7 +1,15 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import ProductCard from './productCard'
-import CSS from 'csstype'
+import styled from "@emotion/styled"
+
+const Products = styled.div({
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'space-between',
+  padding: '1rem 0 1rem 0',
+})
 
 interface Product {
   id: string
@@ -20,14 +28,6 @@ interface Price {
   unit_amount: number
   metadata: Metadata
   product: Product
-}
-
-const conatinerStyles: CSS.Properties = {
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  justifyContent: 'space-between',
-  padding: '1rem 0 1rem 0',
 }
 
 export default () => {
@@ -54,7 +54,7 @@ export default () => {
   ).allStripePrice.nodes
 
   return (
-    <div style={conatinerStyles}>
+    <Products>
       {prices.map(price => {
         const product = {
           id: price.id,
@@ -65,6 +65,6 @@ export default () => {
         }
         return <ProductCard key={price.id} product={product} />
       })}
-    </div>
+    </Products>
   )
 }
