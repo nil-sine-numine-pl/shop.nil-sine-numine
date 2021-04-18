@@ -1,15 +1,19 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
-import { Global } from '@emotion/core'
+import { Global, css } from '@emotion/core'
 import Colors from './colors'
 import styled from '@emotion/styled'
-import { MenuButton } from './MenuButton'
-import { Footer} from './Footer'
+import { MenuButton } from './menuButton'
+import { Footer} from './footer'
 
 type LinksProps = {
   display: string
 }
+
+const GlobalStyles = css({
+  body: {margin: 0, backgroundColor: Colors.background, color: Colors.font, fontFamily: '"Open Sans", Helvetica, Arial', overflowY: `scroll`}
+})
 
 const Links = styled.nav({
   margin: `1rem 1rem 3rem 1rem`,
@@ -30,11 +34,11 @@ const Links = styled.nav({
 const Navbar = styled.div({display: 'block'})
 
 export default function Layout({ children }) {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false)
   return (
     <div>
     <div style={{ padding: `1rem`, margin:`auto`, maxWidth: 800}}>
-      <Global styles={{body: {margin: 0, backgroundColor: Colors.background, color: Colors.font, fontFamily: '"Open Sans", Helvetica, Arial', overflowY: `scroll`}}}/>
+      <Global styles={GlobalStyles}/>
       <header style={{ textAlign: `center` }}>    
         <Navbar>
           <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>

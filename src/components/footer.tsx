@@ -21,6 +21,5 @@ export const Footer = () =>
   <a title="facebook" href="https://www.facebook.com/KurnikPolski/" target="_blank" rel="noopener noreferrer">
     <Icon src={facebook} alt="Facebook"/>
   </a>
-  <br/>
-    Prawa autorskie © 2021  — Nil sine numine
+  <br/> Prawa autorskie © 2021  — Nil sine numine
 </StyledFooter>

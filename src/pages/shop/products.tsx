@@ -4,11 +4,10 @@ import ProductCard from './productCard'
 import styled from "@emotion/styled"
 
 const Products = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  justifyContent: 'space-between',
-  padding: '1rem 0 1rem 0',
+  display: 'grid',
+  gridGap: '1rem',
+  '@media (orientation: portrait)': {gridTemplateColumns: '1'},
+  '@media (orientation: landscape)': {gridTemplateColumns: 'repeat(2, 1fr)'},
 })
 
 interface Product {

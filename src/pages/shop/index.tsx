@@ -16,8 +16,8 @@ export default () => {
         billingAddressCollection={true}
       >
         <div>
-          <Cart />
           <Skus />
+          <Cart />
         </div>
       </CartProvider>
   )
