@@ -12,3 +12,10 @@ Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying ou
   ![t](/img/foto1.JPG "aaa")
 
 The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content. 
+
+## Nasz aktualny cel - Rok szkolny w Rwandzie
+Dzięki waszemu wsparciu udało się nam już zebrać 2280 złotych! 💪💪💪
+
+<img src="/img/prog.svg" width="90%" style="max-width:600px">
+
+Cel: 3000 złotych. Więcej o akcji możecie przeczytać tutaj: [Rok szkolny w Rwandzie](/p1).

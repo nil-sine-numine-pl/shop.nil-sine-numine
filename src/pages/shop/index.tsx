@@ -16,6 +16,7 @@ export default () => {
         billingAddressCollection={true}
       >
         <div>
+          <h1>Kawa i rękodzieła ☕</h1>
           <Skus />
           <Cart />
         </div>

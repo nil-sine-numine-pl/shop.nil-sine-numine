@@ -18,6 +18,7 @@ const GlobalStyles = css({
 const Links = styled.nav({
   margin: `1rem 1rem 3rem 1rem`,
   a: {
+    color: Colors.font,
     textDecoration: `none`,
     margin: `1rem 1.5rem`,
     fontSize: `0.9rem`,

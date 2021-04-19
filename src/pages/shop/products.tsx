@@ -51,7 +51,6 @@ export default () => {
         }
       }`
   ).allStripePrice.nodes
-
   return (
     <Products>
       {prices.map(price => {
@@ -60,6 +59,7 @@ export default () => {
           name: price.product.name,
           price: price.unit_amount,
           currency: price.currency,
+          description: price.product.description,
           image: price.product.images,
         }
         return <ProductCard key={price.id} product={product} />
