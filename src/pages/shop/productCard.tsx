@@ -2,6 +2,7 @@ import React from 'react'
 import { useShoppingCart } from 'use-shopping-cart'
 import styled from "@emotion/styled"
 import Colors from '../../components/colors'
+import { Button } from '../../components/button'
 
 const Card = styled.div({
     display: 'flex',
@@ -31,19 +32,6 @@ const Product = styled.div({
     flexDirection: 'column',
     flex: 1,
     'h4': {margin: '0 0 .5rem 0'}
-})
-
-const Button = styled.button({
-    backgroundColor: Colors.primary,
-    border: 'none',
-    textDecoration: 'none',
-    MozAppearance: 'none',
-    WebkitAppearance: 'none',
-    padding: '.6rem',
-    color: 'white',
-    cursor: 'pointer',
-    marginTop: 'auto',
-    width: '100%'
 })
 
 var formatter = new Intl.NumberFormat('pl-PL', {
