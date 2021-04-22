@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useShoppingCart } from 'use-shopping-cart'
-import { CartView } from './cartView'
+import CartView from '../../components/cartView'
 import styled from '@emotion/styled'
 import cartImg from '../../images/cart.svg'
 import Colors from '../../components/colors'

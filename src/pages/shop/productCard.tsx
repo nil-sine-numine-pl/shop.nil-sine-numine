@@ -3,7 +3,7 @@ import { useShoppingCart } from 'use-shopping-cart'
 import styled from "@emotion/styled"
 import Colors from '../../components/colors'
 import { Button } from '../../components/button'
-import { price } from './priceFormatter'
+import { price } from '../../priceFormatter'
 const Card = styled.div({
     display: 'flex',
     backgroundColor: 'white',

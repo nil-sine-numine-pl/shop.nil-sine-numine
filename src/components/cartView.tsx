@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { ShoppingCartUtilities } from 'use-shopping-cart'
-import { Button } from '../../components/button'
+import { Button } from './button'
 import styled from '@emotion/styled'
-import Colors from '../../components/colors'
-import { price } from './priceFormatter'
+import Colors from './colors'
+import { price } from '../priceFormatter'
 
 const CartViewBox = styled.div({
     padding: '0.8rem',
@@ -27,7 +27,7 @@ const CartActions = styled.div({
     gridGap: '.5rem',
 })
 
-export const CartView = (props: {cart: ShoppingCartUtilities, onClose: () => void}) => 
+export default (props: {cart: ShoppingCartUtilities, onClose: () => void}) => 
 {
     const cart = props.cart
     const [loading, setLoading] = useState(false)
