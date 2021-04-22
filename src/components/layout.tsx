@@ -18,16 +18,18 @@ const GlobalStyles = css({
      fontFamily: '"Open Sans", Helvetica, Arial', 
      overflowY: `scroll`},
   'table': {borderSpacing: 0},
+  a: {
+    color: Colors.font,
+    fontSize: `0.9rem`,
+  },
   'td, th': {borderBottom: '1px solid gray', padding: '.2rem'}
 })
 
 const Links = styled.nav({
   margin: `1rem 1rem 3rem 1rem`,
   a: {
-    color: Colors.font,
-    textDecoration: `none`,
     margin: `1rem 1.5rem`,
-    fontSize: `0.9rem`,
+    textDecoration: `none`,
     '@media (orientation: portrait)': {display: `block`},
   },
   '& :visited': { color: Colors.font},
@@ -54,7 +56,7 @@ export default function Layout({ children }) {
           <MenuButton onClick={() => setActive(!active)}/>
         </Navbar>
         <Links display={active ? 'none':'block'}>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/">POMAGAJ Z NAMI?</Link>
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/">POMAGAJ Z NAMI</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/shop/">SKLEP</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/blog/">BLOG I NEWSY</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/about/">O FUNDACJI</Link >

@@ -1,6 +1,25 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import styled from '@emotion/styled'
+import Colors from '../components/colors'
+import { css } from '@emotion/core'
+
+const Post = styled.article({
+  backgroundColor: 'white',
+  padding: '0.8rem',
+  marginTop: '1rem',
+  display: 'flex',
+  flexDirection: 'row',
+  h2: {margin:0},
+  a: {color: Colors.primary}
+})
+
+const ImageStyles = css({
+  width: '13rem !important',
+  height: '11rem !important',
+  objectFit: 'cover',
+})
 
 const BlogRoll = ({posts}) => {
     return (
@@ -8,30 +27,23 @@ const BlogRoll = ({posts}) => {
         {posts &&
           posts.map(({ node: post }) => (
             <div key={post.id}>
-              <article>
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div>
-                      <GatsbyImage image={getImage(post.frontmatter.featuredimage)} alt="alt" />
-                    </div>
-                  ) : null}
+              <Post>
+                <div>
+                  <GatsbyImage css={ImageStyles} image={getImage(post.frontmatter.featuredimage)} alt="alt" />
+                </div>
+                <div style={{marginLeft: '1rem'}}>
+                  <Link to={post.frontmatter.slug}><h2>{post.frontmatter.title}</h2></Link>
+                  <div>{new Date(post.frontmatter.date).toDateString()}, 🕐 <small>{post.timeToRead} min.</small></div>
                   <p>
+                    {post.frontmatter.description}<br />
+                    <p style={{textAlign:'right'}}>
                     <Link to={post.frontmatter.slug}>
-                      {post.frontmatter.title}
+                      Czytaj dalej →
                     </Link>
-                    <span>
-                      &nbsp;{post.frontmatter.date}
-                    </span>
+                    </p>
                   </p>
-                </header>
-                <p>
-                  {post.frontmatter.description}
-                  <br /><br />
-                  <Link className="button" to={post.frontmatter.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+                </div>
+              </Post>
             </div>
           ))}
       </div>
@@ -60,6 +72,7 @@ export default () => {
               }
             }
             id
+            timeToRead
           }
         }
       }

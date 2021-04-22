@@ -18,6 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            timeToRead
             frontmatter {
               templateKey
               slug
