@@ -12,7 +12,13 @@ type LinksProps = {
 }
 
 const GlobalStyles = css({
-  body: {margin: 0, backgroundColor: Colors.background, color: Colors.font, fontFamily: '"Open Sans", Helvetica, Arial', overflowY: `scroll`}
+  body: {margin: 0,
+     backgroundColor: Colors.background, 
+     color: Colors.font,
+     fontFamily: '"Open Sans", Helvetica, Arial', 
+     overflowY: `scroll`},
+  'table': {borderSpacing: 0},
+  'td, th': {borderBottom: '1px solid gray', padding: '.2rem'}
 })
 
 const Links = styled.nav({
@@ -48,10 +54,10 @@ export default function Layout({ children }) {
           <MenuButton onClick={() => setActive(!active)}/>
         </Navbar>
         <Links display={active ? 'none':'block'}>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/">KIM JESTEŚMY?</Link>
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/">POMAGAJ Z NAMI?</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/shop/">SKLEP</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/blog/">BLOG I NEWSY</Link>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/about/">O NAS</Link >
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/about/">O FUNDACJI</Link >
         </Links>
       </header>
       {children}

@@ -17,7 +17,12 @@ const CartViewBox = styled.div({
     boxSizing: 'border-box',
     boxShadow: '0 0 .4rem #a4a4a4',
     left:0,
-    right:0
+    right:0,
+    img: {
+        width: '5rem',
+        height: '5rem',
+        objectFit: 'cover',
+    }
 })
 
 const CartActions = styled.div({
@@ -25,6 +30,17 @@ const CartActions = styled.div({
     gridColumn: 3,
     gridTemplateColumns: 'repeat(3,1fr)',
     gridGap: '.5rem',
+})
+
+const CartItemsTable = styled.table({
+    width: '100%',
+    textAlign: 'left'
+})
+
+const BigEmoi = styled.div({
+    marginTop: '1rem',
+    textAlign: 'center',
+    fontSize: '8rem'
 })
 
 export default (props: {cart: ShoppingCartUtilities, onClose: () => void}) => 
@@ -36,9 +52,27 @@ export default (props: {cart: ShoppingCartUtilities, onClose: () => void}) =>
 
 return (
     <CartViewBox>
-        {cartProducts.map((cartItem) => <p>{cartItem.name} x {cartItem.quantity}</p>)}
-        <p>Number of Items: {cart.cartCount}</p>
-        <p>Suma: {price(cart.totalPrice / 100)}</p>
+        <CartItemsTable>
+            <thead>
+                <th>Zdjęcie</th>
+                <th>Produkt</th>
+                <th>ilość</th>
+                <th>cena</th>
+            </thead>
+            <tbody>
+            {cartProducts.map((cartItem) => 
+            <tr>
+                <td><img src={cartItem.image} alt="" /></td>
+                <td>{cartItem.name}</td>
+                <td>{cartItem.quantity}</td>
+                <td>{price(cartItem.price * cartItem.quantity/100)}</td>
+            </tr>)}
+            </tbody>
+        </CartItemsTable>
+        {cartProducts.length == 0 ? <p style={{textAlign:'center'}}><BigEmoi>👻</BigEmoi>Koszyk jest pusty</p>: null}
+        <p style={{textAlign: 'right'}}>
+            Suma: <span style={{color:Colors.primary, margin:0, fontSize:'1.1rem'}}>{price(cart.totalPrice / 100)}</span>
+        </p>
         <CartActions>
             <Button onClick={props.onClose}>Zamknij</Button>
             <Button onClick={cart.clearCart}>Wyczyść koszyk</Button>
