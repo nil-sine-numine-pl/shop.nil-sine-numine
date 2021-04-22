@@ -11,5 +11,11 @@ export const Button = styled.button({
     color: 'white',
     cursor: 'pointer',
     marginTop: 'auto',
-    width: '100%'
+    width: '100%',
+    '&:hover': {
+        backgroundColor: Colors.primaryDarker,
+    },
+    '&:disabled': { 
+        backgroundColor: '#aaa'
+    }
 })

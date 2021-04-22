@@ -3,7 +3,7 @@ import { useShoppingCart } from 'use-shopping-cart'
 import styled from "@emotion/styled"
 import Colors from '../../components/colors'
 import { Button } from '../../components/button'
-
+import { price } from './priceFormatter'
 const Card = styled.div({
     display: 'flex',
     backgroundColor: 'white',
@@ -34,11 +34,6 @@ const Product = styled.div({
     'h4': {margin: '0 0 .5rem 0'}
 })
 
-var formatter = new Intl.NumberFormat('pl-PL', {
-    style: 'currency',
-    currency: 'PLN'
-  });
-
 export default ({ product }) => {
     product = product ?? {};
     const { addItem } = useShoppingCart()
@@ -49,7 +44,7 @@ export default ({ product }) => {
               <h4>{product.name}</h4>
               <div>
                 <Description>{product.description}</Description>
-                <p style={{color:Colors.primary, margin:0, fontSize:'1.1rem'}}>{`${formatter.format(parseInt(product.price)/100)}`}</p>
+                <p style={{color:Colors.primary, margin:0, fontSize:'1.1rem'}}>{`${price(parseInt(product.price)/100)}`}</p>
               </div>
               <Button onClick={() => addItem(product)}>Do koszyka</Button>
             </Product>

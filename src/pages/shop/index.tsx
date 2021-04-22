@@ -2,7 +2,7 @@ import React from "react"
 import getStripe from '../../get-stripe'
 import { CartProvider } from "use-shopping-cart"
 import Cart from "./cart"
-import Skus from "./products"
+import Products from "./products"
 
 export default () => {
   return (
@@ -17,7 +17,7 @@ export default () => {
       >
         <div>
           <h1>Kawa i rękodzieła ☕</h1>
-          <Skus />
+          <Products />
           <Cart />
         </div>
       </CartProvider>

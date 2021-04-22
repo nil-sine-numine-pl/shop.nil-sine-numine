@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { ShoppingCartUtilities, useShoppingCart } from 'use-shopping-cart'
-import { Button } from '../../components/button'
+import { useShoppingCart } from 'use-shopping-cart'
+import { CartView } from './cartView'
 import styled from '@emotion/styled'
 import cartImg from '../../images/cart.svg'
 import Colors from '../../components/colors'
@@ -46,28 +46,6 @@ const CartLocation = styled.div({
     top: 0
 })
 
-const CartView = (cart: ShoppingCartUtilities) => 
-{
-    //const [loading, setLoading] = useState(false)
-    let cartProducts = Object.keys(cart.cartDetails)
-                             .map(ix => cart.cartDetails[ix]);
-
-return (
-    <div>
-    <p>Number of Items: {cart.cartCount}</p>
-    <p>Total: {cart.totalPrice}</p>
-    <Button
-        disabled={/*loading ||*/ cartProducts.length == 0}
-        onClick={() => {
-            //setLoading(true)
-            cart.redirectToCheckout()
-        }}>
-        {/*loading ? 'Loading...' :*/ 'Checkout'}
-    </Button>
-    <button style={{display:'none'}} onClick={cart.clearCart}>Clear cart</button>
-    </div>)
-}
-
 const Cart = () => {
     const [viewCart, setViewCart] = useState(false)
     const cart = useShoppingCart()
@@ -76,7 +54,7 @@ const Cart = () => {
         .map(ix => cart.cartDetails[ix]);
 
     return (
-      <div>
+      <>
         <CartLocation>
             <Circle onClick={() => setViewCart(true)}>
                 <Icon src={cartImg} alt="Basket"/>
@@ -86,8 +64,8 @@ const Cart = () => {
                 </SmallCircle>
             </Circle>
         </CartLocation>
-        {viewCart ? CartView(cart): null}
-      </div>
+        {viewCart ? <CartView cart={cart} onClose={() => setViewCart(false)}></CartView>: null}
+      </>
     )
 }
 
