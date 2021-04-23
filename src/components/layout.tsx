@@ -6,6 +6,9 @@ import Colors from './colors'
 import styled from '@emotion/styled'
 import { MenuButton } from './menuButton'
 import { Footer} from './footer'
+import Helmet from 'react-helmet'
+import useSiteMetadata from './siteMetadata'
+import { withPrefix } from 'gatsby'
 
 type LinksProps = {
   display: string
@@ -50,8 +53,22 @@ const Header = styled.header({
 
 export default function Layout({ children }) {
   const [active, setActive] = useState(false)
+  const { title, description } = useSiteMetadata()
+
   return (
     <>
+      <Helmet>
+        <html lang="pl" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`}/>
+        <meta property="og:url" content="https://nilsinenumine.netlify.app/"/>
+        <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="64x64"/>
+        <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="32x32"/>
+        <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="16x16" />
+      </Helmet>
       <Global styles={GlobalStyles}/>
       <Header style={{ textAlign: `center`, padding:'1rem', background: 'white' }}>    
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>

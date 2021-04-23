@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Fundacja Nil Sine Numine`,
-    siteUrl: 'https://nilsinenumine.netlify.app/',
+    url: 'https://nilsinenumine.netlify.app/',
+    description: 'Pomagajmy razem! Wspieraj nas przez zakup rękodzieła lub pysznej kawy prosto z Rwandy.'
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -34,6 +35,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-transformer-sharp',
