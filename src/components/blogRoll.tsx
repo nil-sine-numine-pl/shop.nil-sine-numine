@@ -9,16 +9,24 @@ const Post = styled.article({
   backgroundColor: 'white',
   padding: '0.8rem',
   marginTop: '1rem',
-  display: 'flex',
-  flexDirection: 'row',
+  display: 'grid',
+  gridGap: '1rem',
   h2: {margin:0},
-  a: {color: Colors.primary}
+  a: {color: Colors.primary},
+  '@media (max-width: 40rem)': {gridTemplateColumns: '1'},
+  '@media (min-width: 40rem)': {gridTemplateColumns: 'auto auto'},
 })
 
 const ImageStyles = css({
-  width: '13rem !important',
-  height: '11rem !important',
   objectFit: 'cover',
+  '@media (max-width: 40rem)': {
+    width: '100% !important',
+    height: '13rem !important',
+  },
+  '@media (min-width: 40rem)': {
+    width: '13rem !important',
+    height: '11rem !important',
+  },
 })
 
 const BlogRoll = ({posts}) => {

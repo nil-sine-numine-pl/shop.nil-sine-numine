@@ -26,7 +26,7 @@ const GlobalStyles = css({
 })
 
 const Links = styled.nav({
-  margin: `1rem 1rem 3rem 1rem`,
+  margin: `1rem 0 0 0`,
   a: {
     margin: `1rem 1.5rem`,
     textDecoration: `none`,
@@ -40,31 +40,35 @@ const Links = styled.nav({
   '@media (orientation: landscape)': {display: 'block'},
 }))
 
-const Navbar = styled.div({display: 'block'})
+const Header = styled.header({ 
+  textAlign: `center`,
+   padding:'1rem', 
+   background: 'white',
+   boxShadow: '0 0 .4rem  gray'
+  })
+
 
 export default function Layout({ children }) {
   const [active, setActive] = useState(false)
   return (
-    <div>
-    <div style={{ padding: `1rem`, margin:`auto`, maxWidth: 800}}>
+    <>
       <Global styles={GlobalStyles}/>
-      <header style={{ textAlign: `center` }}>    
-        <Navbar>
-          <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+      <Header style={{ textAlign: `center`, padding:'1rem', background: 'white' }}>    
+        <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
             <StaticImage src="../images/logo.png" alt="" placeholder="blurred"  />
-          </Link>
-          <MenuButton onClick={() => setActive(!active)}/>
-        </Navbar>
+        </Link>
+        <MenuButton onClick={() => setActive(!active)}/>
         <Links display={active ? 'none':'block'}>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/">POMAGAJ Z NAMI</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/shop/">SKLEP</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/blog/">BLOG I NEWSY</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/about/">O FUNDACJI</Link >
         </Links>
-      </header>
+      </Header>
+      <div style={{ padding: `1rem`, margin:`auto`, maxWidth: 800}}>
       {children}
       </div>
       <Footer/>
-    </div>
+    </>
   )
 }

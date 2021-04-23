@@ -39,7 +39,7 @@ const SmallCircle = styled.div({
 
 const CartLocation = styled.div({
     position:'fixed',
-    marginTop: '5rem',
+    marginTop: '6rem',
     maxWidth: '800px',
     width: '100%',
     height: 0,
