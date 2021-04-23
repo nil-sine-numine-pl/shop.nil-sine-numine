@@ -70,16 +70,16 @@ export default function Layout({ children }) {
         <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="16x16" />
       </Helmet>
       <Global styles={GlobalStyles}/>
-      <Header style={{ textAlign: `center`, padding:'1rem', background: 'white' }}>    
-        <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-            <StaticImage src="../images/logo.png" alt="" placeholder="blurred"  />
+      <Header aria-label="Fundacja" style={{ textAlign: `center`, padding:'1rem', background: 'white' }}>    
+        <Link  to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+            <StaticImage src="../images/logo.png" alt="Logo" placeholder="blurred"  />
         </Link>
         <MenuButton onClick={() => setActive(!active)}/>
         <Links display={active ? 'none':'block'}>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/">POMAGAJ Z NAMI</Link>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/shop/">SKLEP</Link>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/blog/">BLOG I NEWSY</Link>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' to="/about/">O FUNDACJI</Link >
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Pomagaj z nami" to="/">POMAGAJ Z NAMI</Link>
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Sklep" to="/shop/">SKLEP</Link>
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Blog i newsy" to="/blog/">BLOG I NEWSY</Link>
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="O Fundacji" to="/about/">O FUNDACJI</Link >
         </Links>
       </Header>
       <div style={{ padding: `1rem`, margin:`auto`, maxWidth: 800}}>
