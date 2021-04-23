@@ -16,6 +16,6 @@ The purpose of lorem ipsum is to create a natural looking block of text (sentenc
 ## Nasz aktualny cel - Rok szkolny w Rwandzie
 Dzięki waszemu wsparciu udało się nam już zebrać 2280 złotych! 💪💪💪
 
-<img src="/img/prog.svg" width="90%" style="max-width:600px">
+<img src="/img/prog.svg" width="90%" style="max-width:600px" alt="progress">
 
 Cel: 3000 złotych. Więcej o akcji możecie przeczytać tutaj: [Rok szkolny w Rwandzie](/p1).
