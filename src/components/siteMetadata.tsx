@@ -5,6 +5,8 @@ type Site = {
     siteMetadata: {
         title: string
         description: string
+        facebookUrl: string
+        footerFileUrl: string
     }
 }
 
@@ -16,6 +18,8 @@ export default () => {
             siteMetadata {
               title
               description
+              facebookUrl
+              footerFileUrl
             }
           }
         }

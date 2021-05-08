@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Fundacja Nil Sine Numine`,
-    url: 'https://nilsinenumine.netlify.app/',
+    url: 'https://numine.pl/',
+    facebookUrl: 'https://www.facebook.com/KurnikPolski/',
+    footerFileUrl: '/Polityka-prywatnosci.pdf',
     description: 'Pomagajmy razem! Wspieraj nas przez zakup rękodzieła lub pysznej kawy prosto z Rwandy.'
   },
   plugins: [
