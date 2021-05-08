@@ -42,4 +42,4 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Image", name: "image", widget: image}
+      - {label: "Image", name: "featuredimage", widget: image}
