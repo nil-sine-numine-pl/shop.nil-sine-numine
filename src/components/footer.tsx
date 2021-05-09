@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import Colors from './colors'
 import useSiteMetadata from './siteMetadata'
+import { StaticImage } from 'gatsby-plugin-image'
 import facebook from '../images/facebook.svg'
 
 const Icon = styled.img({
@@ -33,7 +34,7 @@ export const Footer = () => {
         Polityka prywatności
       </FooterLink>
       <br/><br/>
-      <img src="/img/mail_sw.png" title="mail" alt="mail"></img>
+      <StaticImage src="../images/mail_sw.png" alt="mail" placeholder="blurred"  />
       <p>
         {`Prawa autorskie © ${new Date().getFullYear()}  — Nil sine numine`}
       </p>
