@@ -3,6 +3,7 @@ import { Button } from './button'
 import styled from '@emotion/styled'
 import Colors from './colors'
 import { price } from '../priceFormatter'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const CartViewBox = styled.div({
     padding: '0.8rem',
@@ -46,6 +47,16 @@ export default (props: {cart, onClose: () => void}) =>
 {
     const cart = props.cart
     const [loading, setLoading] = useState(false)
+    const cartInfo = useStaticQuery(
+        graphql`
+          query {
+            allMarkdownRemark(filter: {id: {}, frontmatter: {id: {eq: "info-cart"}}}) {
+              nodes {
+                html
+              }
+            }
+          }`
+      ).allMarkdownRemark.nodes[0].html
     let cartProducts = Object.keys(cart.cartDetails)
                              .map(ix => cart.cartDetails[ix])
 
@@ -92,5 +103,6 @@ return (
                 {loading ? '...' : 'Do zapłaty'}
             </Button>
         </CartActions>
+        <small dangerouslySetInnerHTML={{ __html: cartInfo }}/>
     </CartViewBox>)
 }

@@ -30,7 +30,7 @@ interface Price {
 }
 
 export default () => {
-  const prices: Price[] = useStaticQuery(
+  const productsData = useStaticQuery(
     graphql`
       query {
         allStripePrice(filter: {active: {eq: true}}) {
@@ -48,22 +48,32 @@ export default () => {
               images
             }
           }
+        },
+        allMarkdownRemark(filter: {id: {}, frontmatter: {id: {eq: "info-products"}}}) {
+          nodes {
+            html
+          }
         }
       }`
-  ).allStripePrice.nodes
+  )
+  const prices: Price[]  = productsData.allStripePrice.nodes
+  const description = productsData.allMarkdownRemark.nodes[0].html
   return (
-    <Products>
-      {prices.map(price => {
-        const product = {
-          id: price.id,
-          name: price.product.name,
-          price: price.unit_amount,
-          currency: price.currency,
-          description: price.product.description,
-          image: price.product.images,
-        }
-        return <ProductCard key={price.id} product={product} />
-      })}
-    </Products>
+    <>
+      <div dangerouslySetInnerHTML={{ __html: description }}/>
+      <Products>
+        {prices.map(price => {
+          const product = {
+            id: price.id,
+            name: price.product.name,
+            price: price.unit_amount,
+            currency: price.currency,
+            description: price.product.description,
+            image: price.product.images,
+          }
+          return <ProductCard key={price.id} product={product} />
+        })}
+      </Products>
+    </>
   )
 }

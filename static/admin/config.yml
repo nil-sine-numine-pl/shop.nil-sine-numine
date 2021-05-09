@@ -29,6 +29,16 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/shop/info-cart.md"
+        label: "Informajce w koszyku"
+        name: "info-cart"
+        fields: 
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/shop/info-products.md"
+        label: "Informajce o produktach"
+        name: "info-products"
+        fields: 
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
     label: "Posts"
     folder: "src/pages/blog"
