@@ -6,6 +6,8 @@ import { price } from '../priceFormatter'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const CartViewBox = styled.div({
+    maxHeight: '100vh',
+    overflowY: 'auto',
     padding: '0.8rem',
     backgroundColor: 'white',
     position:'fixed',
