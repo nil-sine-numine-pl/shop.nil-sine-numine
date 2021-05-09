@@ -80,6 +80,7 @@ export default function Layout({ children }) {
           <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Sklep" to="/shop/">SKLEP</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Blog i newsy" to="/blog/">BLOG I NEWSY</Link>
           <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="O Fundacji" to="/about/">O FUNDACJI</Link >
+          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Kontakt" to="/contact/">KONTAKT</Link >
         </Links>
       </Header>
       <div style={{ padding: `1rem`, margin:`auto`, maxWidth: 800}}>

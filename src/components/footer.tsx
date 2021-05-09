@@ -14,7 +14,7 @@ const StyledFooter = styled.footer({
   backgroundColor: Colors.primary,
   textAlign: `center`,
   marginTop: `4rem`,
-  padding: `2rem`,
+  padding: `1rem`,
 })
 
 const FooterLink = styled.a ({
@@ -32,6 +32,8 @@ export const Footer = () => {
       <FooterLink title="polityka prywatności" target="_blank" href={footerFileUrl} rel="noopener noreferrer">
         Polityka prywatności
       </FooterLink>
+      <br/><br/>
+      <img src="/img/mail_sw.png" title="mail" alt="mail"></img>
       <p>
         {`Prawa autorskie © ${new Date().getFullYear()}  — Nil sine numine`}
       </p>
