@@ -21,6 +21,9 @@ const GlobalStyles = css({
      fontFamily: '"Open Sans", Helvetica, Arial', 
      overflowY: `scroll`},
   'table': {borderSpacing: 0},
+  iframe: {
+    width: '100%'
+  },
   a: {
     color: Colors.font,
     fontSize: `0.9rem`,
