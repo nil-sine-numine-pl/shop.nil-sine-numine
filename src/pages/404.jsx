@@ -11,7 +11,7 @@ export default function NotFoundPage() {
         <span role="img" aria-label="Pensive emoji">
           😔
         </span>{" "}
-        zarządana strona nie istnieje.
+        żądana strona nie istnieje.
         <br />
         <br />
         <Link to="/">Wróć do strony głównej.</Link>.

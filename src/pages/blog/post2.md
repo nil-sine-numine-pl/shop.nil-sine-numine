@@ -1,8 +1,7 @@
 ---
 templateKey: blog-post
 title: Title of second post!
-date: 2020-03-29T19:09:10.000Z
-slug: /p2
+date: 2020-03-29
 description: The purpose of lorem ipsum is to create a natural looking block of
   text (sentence, paragraph, page, etc.) that doesn't distract from the layout.
   A practice not without controversy, laying out pages with meaningless filler

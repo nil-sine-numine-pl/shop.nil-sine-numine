@@ -57,7 +57,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Short description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "date"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Image", name: "featuredimage", widget: image}

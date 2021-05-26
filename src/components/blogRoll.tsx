@@ -30,6 +30,7 @@ const ImageStyles = css({
 })
 
 const BlogRoll = ({posts}) => {
+    console.log(posts)
     return (
       <div>
         {posts &&
@@ -40,12 +41,12 @@ const BlogRoll = ({posts}) => {
                   <GatsbyImage css={ImageStyles} image={getImage(post.frontmatter.featuredimage)} alt="alt" />
                 </div>
                 <div style={{marginLeft: '1rem'}}>
-                  <Link to={post.frontmatter.slug}><h2>{post.frontmatter.title}</h2></Link>
+                  <Link to={post.fields.slug}><h2>{post.frontmatter.title}</h2></Link>
                   <div>{new Date(post.frontmatter.date).toDateString()}, 🕐 <small>{post.timeToRead} min.</small></div>
                   <p>
                     {post.frontmatter.description}<br />
                     <p style={{textAlign:'right'}}>
-                    <Link to={post.frontmatter.slug}>
+                    <Link to={post.fields.slug}>
                       Czytaj dalej →
                     </Link>
                     </p>
@@ -81,6 +82,9 @@ export default () => {
             }
             id
             timeToRead
+            fields {
+              slug
+            }
           }
         }
       }
