@@ -5,16 +5,16 @@ export default function NotFoundPage() {
   return (
     <main>
       <title>Not found</title>
-      <h1>Page not found</h1>
+      <h1>Nie odnaleziono strony</h1>
       <p>
-        Sorry{" "}
+        Przykro nam{" "}
         <span role="img" aria-label="Pensive emoji">
           😔
         </span>{" "}
-        we couldn’t find what you were looking for.
+        zarządana strona nie istnieje.
         <br />
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/">Wróć do strony głównej.</Link>.
       </p>
     </main>
   )

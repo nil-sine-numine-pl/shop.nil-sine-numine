@@ -53,10 +53,11 @@ collections:
     slug: "index"
     media_folder: ''
     public_folder: ''
-    path: '{{name}}/index'
+    path: '{{title}}/index'
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Short description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Image", name: "featuredimage", widget: image}
