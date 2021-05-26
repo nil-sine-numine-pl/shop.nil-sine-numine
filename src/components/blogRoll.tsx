@@ -14,7 +14,7 @@ const Post = styled.article({
   h2: {margin:0},
   a: {color: Colors.primary},
   '@media (max-width: 40rem)': {gridTemplateColumns: '1'},
-  '@media (min-width: 40rem)': {gridTemplateColumns: 'auto auto'},
+  '@media (min-width: 40rem)': {gridTemplateColumns: 'max-content auto'},
 })
 
 const ImageStyles = css({
