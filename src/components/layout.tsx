@@ -15,10 +15,16 @@ type LinksProps = {
 }
 
 const GlobalStyles = css({
+  '@font-face': { 
+    fontFamily: 'Montserrat',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    src: "url(../fonts/Montserrat/Montserrat-Regular.ttf) format('truetype')"
+  },
   body: {margin: 0,
      backgroundColor: Colors.background, 
      color: Colors.font,
-     fontFamily: '"Open Sans", Helvetica, Arial', 
+     fontFamily: 'Montserrat', 
      overflowY: `scroll`},
   'table': {borderSpacing: 0},
   iframe: {
