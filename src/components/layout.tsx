@@ -14,51 +14,85 @@ type LinksProps = {
   display: string
 }
 
-const GlobalStyles = css({
-  '@font-face': { 
-    fontFamily: 'Montserrat',
-    fontStyle: 'normal',
-    fontWeight: 700,
-    src: "url(../fonts/Montserrat/Montserrat-Regular.ttf) format('truetype')"
-  },
-  body: {margin: 0,
-     backgroundColor: Colors.background, 
-     color: Colors.font,
-     fontFamily: 'Montserrat', 
-     overflowY: `scroll`},
-  'table': {borderSpacing: 0},
-  iframe: {
-    width: '100%'
-  },
-  a: {
-    color: Colors.font,
-    fontSize: `0.9rem`,
-  },
-  'td, th': {borderBottom: '1px solid gray', padding: '.2rem'}
-})
+const GlobalStyles2 = css`
+@font-face { 
+  font-family: 'montserrat';
+  font-style: 'normal';
+  src: url(../fonts/montserrat/Montserrat-Regular.ttf) format('truetype');
+}
+@font-face { 
+  font-family: 'montserrat-semibold';
+  font-style: 'normal';
+  src: url(../fonts/montserrat/Montserrat-SemiBold.ttf) format('truetype');
+}
+@font-face { 
+  font-family: 'Playfair';
+  font-style: 'normal';
+  src: url(../fonts/playfair_display/PlayfairDisplay-Regular.ttf) format('truetype');
+}
+body {
+   margin: 0;
+   font-family: 'montserrat';
+   overflowY: 'scroll';
+}
+table {borderSpacing: 0};
+iframe {
+  width: '100%';
+}
+h1 { margin: 0 }
+a {
+  color: ${Colors.font};
+  font-size: '0.9rem';
+}
+td, th {
+  border-bottom: '1px solid gray';
+  padding: '.2rem';
+}
+`
 
 const Links = styled.nav({
   margin: `1rem 0 0 0`,
   a: {
     margin: `1rem 1.5rem`,
     textDecoration: `none`,
+    fontFamily: 'montserrat-semibold',
+    color: 'white',
     '@media (orientation: portrait)': {display: `block`},
   },
-  '& :visited': { color: Colors.font},
-  '.active-link': {color: Colors.primary, textDecoration: `underline`},
+  '.active-link': { color: '#8cbb6c'},
 },
 (props: LinksProps) => ({
   '@media (orientation: portrait)': {display: props.display},
-  '@media (orientation: landscape)': {display: 'block'},
+  '@media (orientation: landscape)': {display: 'inline'},
 }))
 
 const Header = styled.header({ 
   textAlign: `center`,
-   padding:'1rem', 
    background: 'white',
-   boxShadow: '0 0 .4rem  gray'
+   display: 'grid',
   })
-
+const HeaderContent = styled.div({
+  gridArea: "1/1",
+  position: "relative",
+  display: "grid",
+  gridTemplateRows: '6rem auto'
+})
+const Navigation = styled.div({
+  gridArea: "1/1",
+  position: "relative",
+  paddingTop: '1rem',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  borderBottom: '1px double white',
+  borderBottomStyle: 'double'
+})
+const Title = styled.div({
+  display: "grid",
+  placeItems: "center",
+})
+const WhiteLine = styled.div({ 
+  borderBottom: '1px solid white',
+  paddingTop: '1rem'
+})
 
 export default function Layout({ children }) {
   const [active, setActive] = useState(false)
@@ -78,21 +112,30 @@ export default function Layout({ children }) {
         <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="32x32"/>
         <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="16x16" />
       </Helmet>
-      <Global styles={GlobalStyles}/>
-      <Header aria-label="Fundacja" style={{ textAlign: `center`, padding:'1rem', background: 'white' }}>    
-        <Link  to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-            <StaticImage src="../images/logo.png" alt="Logo" placeholder="blurred"  />
-        </Link>
-        <MenuButton onClick={() => setActive(!active)}/>
-        <Links display={active ? 'none':'block'}>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Pomagaj z nami" to="/">POMAGAJ Z NAMI</Link>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Sklep" to="/shop/">SKLEP</Link>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Blog i newsy" to="/blog/">BLOG I NEWSY</Link>
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="O Fundacji" to="/about/">O FUNDACJI</Link >
-          <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Kontakt" to="/contact/">KONTAKT</Link >
-        </Links>
+      <Global styles={GlobalStyles2}/>
+      <Header aria-label="Fundacja">    
+        <StaticImage src="../images/header.webp" style={{gridArea: "1/1"}} alt="Header" placeholder="blurred"  />
+        <HeaderContent>
+          <Navigation>
+            <MenuButton onClick={() => setActive(!active)}/>
+            <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+              <StaticImage src="../images/logotyp_menu.webp" alt="Logo" placeholder="blurred"  />
+            </Link>
+            <Links display={active ? 'none':'block'}>
+              <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Pomagaj z nami" to="/">POMAGAJ Z NAMI</Link>
+              <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Sklep" to="/shop/">SKLEP</Link>
+              <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Blog" to="/blog/">BLOG</Link>
+              <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="O Fundacji" to="/about/">O FUNDACJI</Link >
+              <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Kontakt" to="/contact/">KONTAKT</Link >
+            </Links>
+            <WhiteLine/>
+          </Navigation>
+          <Title>
+            <h1 style={{color: 'white', fontFamily: 'Playfair', fontSize:'5rem'}}>Nil Sine Numine</h1>
+          </Title>
+        </HeaderContent>
       </Header>
-      <div style={{ padding: `1rem`, margin:`auto`, maxWidth: 800}}>
+      <div style={{padding: '1rem', margin:'auto', maxWidth: 1000}}>
       {children}
       </div>
       <Footer/>
