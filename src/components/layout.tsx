@@ -19,16 +19,19 @@ const GlobalStyles2 = css`
   font-family: 'montserrat';
   font-style: 'normal';
   src: url(../fonts/montserrat/Montserrat-Regular.ttf) format('truetype');
+  font-display: swap;
 }
 @font-face { 
   font-family: 'montserrat-semibold';
   font-style: 'normal';
   src: url(../fonts/montserrat/Montserrat-SemiBold.ttf) format('truetype');
+  font-display: swap;
 }
 @font-face { 
   font-family: 'Playfair';
   font-style: 'normal';
   src: url(../fonts/playfair_display/PlayfairDisplay-Regular.ttf) format('truetype');
+  font-display: swap;
 }
 body {
    margin: 0;
