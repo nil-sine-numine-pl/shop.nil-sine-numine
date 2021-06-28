@@ -3,7 +3,7 @@ import { useShoppingCart } from 'use-shopping-cart'
 import CartView from '../../components/cartView'
 import styled from '@emotion/styled'
 import cartImg from '../../images/cart.svg'
-import Colors from '../../components/colors'
+import { Colors } from '../../components/consts'
 
 const Icon = styled.img({
     width: '2rem',

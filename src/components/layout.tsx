@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
 import { Global, css } from '@emotion/core'
-import Colors from './colors'
+import { Colors } from './consts'
 import styled from '@emotion/styled'
 import { MenuButton } from './menuButton'
 import { Footer} from './footer'
@@ -14,8 +14,8 @@ type LinksProps = {
   display: string
 }
 
-const GlobalStyles2 = css`
-@font-face { 
+const GlobalStyles = css`
+@font-face {
   font-family: 'montserrat';
   font-style: 'normal';
   src: url(../fonts/montserrat/Montserrat-Regular.ttf) format('truetype');
@@ -28,7 +28,7 @@ const GlobalStyles2 = css`
   font-display: swap;
 }
 @font-face { 
-  font-family: 'Playfair';
+  font-family: 'playfair';
   font-style: 'normal';
   src: url(../fonts/playfair_display/PlayfairDisplay-Regular.ttf) format('truetype');
   font-display: swap;
@@ -45,19 +45,17 @@ iframe {
 h1 { margin: 0 }
 a {
   color: ${Colors.font};
-  font-size: '0.9rem';
+  text-decoration: none;
 }
 td, th {
   border-bottom: '1px solid gray';
   padding: '.2rem';
-}
-`
+}`
 
 const Links = styled.nav({
   margin: `1rem 0 0 0`,
   a: {
     margin: `1rem 1.5rem`,
-    textDecoration: `none`,
     fontFamily: 'montserrat-semibold',
     color: 'white',
     '@media (orientation: portrait)': {display: `block`},
@@ -71,8 +69,8 @@ const Links = styled.nav({
 
 const Header = styled.header({ 
   textAlign: `center`,
-   background: 'white',
-   display: 'grid',
+  background: 'white',
+  display: 'grid',
   })
 const HeaderContent = styled.div({
   gridArea: "1/1",
@@ -97,6 +95,17 @@ const WhiteLine = styled.div({
   paddingTop: '1rem'
 })
 
+const WhitleLineButton = styled.button({
+  border: '1px solid white',
+  background: 'none',
+  fontFamily: 'montserrat-semibold',
+  fontsize: '1rem',
+  color: 'white',
+  margin: '1rem',
+  padding: '0.5rem 1rem 0.5rem 1rem',
+  cursor: 'pointer'
+})
+
 export default function Layout({ children }) {
   const [active, setActive] = useState(false)
   const { title, description } = useSiteMetadata()
@@ -113,9 +122,9 @@ export default function Layout({ children }) {
         <meta property="og:url" content="https://nilsinenumine.netlify.app/"/>
         <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="64x64"/>
         <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="32x32"/>
-        <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="16x16" />
+        <link rel="icon" type="image/png" href={`${withPrefix('/')}img/fav.png`} sizes="16x16"/>
       </Helmet>
-      <Global styles={GlobalStyles2}/>
+      <Global styles={GlobalStyles}/>
       <Header aria-label="Fundacja">    
         <StaticImage src="../images/header.webp" style={{gridArea: "1/1"}} alt="Header" placeholder="blurred"  />
         <HeaderContent>
@@ -134,13 +143,17 @@ export default function Layout({ children }) {
             <WhiteLine/>
           </Navigation>
           <Title>
-            <h1 style={{color: 'white', fontFamily: 'Playfair', fontSize:'5rem'}}>Nil Sine Numine</h1>
+            <section>
+              <h1 style={{color: 'white', fontFamily: 'playfair', fontSize:'5rem'}}>Nil Sine Numine</h1>
+              <h1 style={{color: 'white', fontFamily: 'montserrat', fontSize:'2rem'}}>Nic bez woli bożej</h1>
+              <Link to="/about/">
+                <WhitleLineButton>O FUNDACJI</WhitleLineButton>
+              </Link>
+            </section>
           </Title>
         </HeaderContent>
       </Header>
-      <div style={{padding: '1rem', margin:'auto', maxWidth: 1000}}>
       {children}
-      </div>
       <Footer/>
     </>
   )

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from './button'
 import styled from '@emotion/styled'
-import Colors from './colors'
+import { Colors } from './consts'
 import { price } from '../priceFormatter'
 import { useStaticQuery, graphql } from 'gatsby'
 

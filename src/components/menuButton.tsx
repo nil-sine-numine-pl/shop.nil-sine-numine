@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import Colors from './colors'
+import { Colors } from './consts'
 
 const Menu = styled.div({
   '@media (orientation: landscape)': {display: `none`},

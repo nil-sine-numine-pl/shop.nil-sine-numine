@@ -3,6 +3,7 @@ import getStripe from '../../get-stripe'
 import { CartProvider } from "use-shopping-cart"
 import Cart from "./cart"
 import Products from "./products"
+import { Page } from "../../components/page"
 
 export default () => {
   return (
@@ -15,11 +16,11 @@ export default () => {
         allowedCountries={['PL']}
         billingAddressCollection={true}
       >
-        <div>
+        <Page>
           <h1>Kawa i rękodzieła ☕</h1>
           <Products />
           <Cart />
-        </div>
+        </Page>
       </CartProvider>
   )
 }

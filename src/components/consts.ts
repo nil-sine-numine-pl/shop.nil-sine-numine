@@ -1,4 +1,4 @@
-const Colors = {
+export const Colors = {
     background: '#ededed',
     card: 'white',
     primary: 'rgb(110,61,50)',
@@ -7,4 +7,6 @@ const Colors = {
     green: '#8cbb6c'
   }
 
-export default Colors
+export const Sizes = {
+  pageMaxWidth: 1000
+}

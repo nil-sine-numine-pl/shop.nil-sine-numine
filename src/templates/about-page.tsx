@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Page } from "../components/page"
 
 export default ({ data }) => {
   const { markdownRemark } = data
   const { html } = markdownRemark
   return (
-      <div
+      <Page
         dangerouslySetInnerHTML={{ __html: html }}
       />
   )

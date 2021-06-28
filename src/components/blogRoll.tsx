@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
-import Colors from '../components/colors'
+import { Colors } from '../components/consts'
 import { css } from '@emotion/core'
 
 const Post = styled.article({
