@@ -76,7 +76,8 @@ const HeaderContent = styled.div({
   gridArea: "1/1",
   position: "relative",
   display: "grid",
-  gridTemplateRows: '6rem auto'
+  gridTemplateRows: '6rem auto',
+  marginBottom: '3rem'
 })
 const Navigation = styled.div({
   gridArea: "1/1",
