@@ -75,21 +75,25 @@ const Header = styled.header({
 const HeaderContent = styled.div({
   gridArea: "1/1",
   position: "relative",
-  display: "grid",
   gridTemplateRows: '6rem auto',
   marginBottom: '3rem'
 })
 const Navigation = styled.div({
-  gridArea: "1/1",
-  position: "relative",
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1,
   paddingTop: '1rem',
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  borderBottom: '1px double white',
-  borderBottomStyle: 'double'
+  borderBottom: '1px solid white',
 })
 const Title = styled.div({
+  gridArea: "1/1",
+  position: "relative",
   display: "grid",
   placeItems: "center",
+  '@media (orientation: portrait)': {display: `none`},
 })
 const WhiteLine = styled.div({ 
   borderBottom: '1px solid white',
@@ -128,8 +132,7 @@ export default function Layout({ children }) {
       <Global styles={GlobalStyles}/>
       <Header aria-label="Fundacja">    
         <StaticImage src="../images/header.webp" style={{gridArea: "1/1"}} alt="Header" placeholder="blurred"  />
-        <HeaderContent>
-          <Navigation>
+        <Navigation>
             <MenuButton onClick={() => setActive(!active)}/>
             <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
               <StaticImage src="../images/logotyp_menu.webp" alt="Logo" placeholder="blurred"  />
@@ -143,7 +146,10 @@ export default function Layout({ children }) {
             </Links>
             <WhiteLine/>
           </Navigation>
-          <Title>
+        <HeaderContent>
+
+        </HeaderContent>
+        <Title>
             <section>
               <h1 style={{color: 'white', fontFamily: 'playfair', fontSize:'5rem'}}>Nil Sine Numine</h1>
               <h1 style={{color: 'white', fontFamily: 'montserrat', fontSize:'2rem'}}>Nic bez woli bożej</h1>
@@ -152,7 +158,6 @@ export default function Layout({ children }) {
               </Link>
             </section>
           </Title>
-        </HeaderContent>
       </Header>
       {children}
       <Footer/>
