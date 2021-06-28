@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Lined, H1 } from '../components/lined'
+import { Page } from '../components/page'
 
 export const BlogPostTemplate = ({
   content,
@@ -7,19 +9,11 @@ export const BlogPostTemplate = ({
   title
 }) => {
   return (
-    <section className="section">
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-          </div>
-        </div>
-      </div>
-    </section>
+    <Page className="section">
+      <Lined><H1>{title}</H1></Lined>
+      <p>{description}</p>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </Page>
   )
 }
 
