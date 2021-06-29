@@ -11,6 +11,7 @@ const Post = styled.article({
   marginTop: '1rem',
   display: 'grid',
   gridGap: '1rem',
+  border: '1px solid #d7d7d7',
   h2: {margin:0},
   a: {color: Colors.primary},
   '@media (max-width: 40rem)': {gridTemplateColumns: '1'},
