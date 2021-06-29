@@ -13,7 +13,6 @@ const Icon = styled.img({
 
 const StyledFooter = styled.footer({
   marginTop: `4rem`,
-  padding: '3rem',
   backgroundColor: '#f0f0f0',
   fontFamily: 'montserrat-semibold'
 })
