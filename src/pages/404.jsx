@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { Page } from "../components/page"
 
 export default function NotFoundPage() {
   return (
-    <main>
+    <Page>
       <title>Not found</title>
       <h1>Nie odnaleziono strony</h1>
       <p>
@@ -16,6 +17,6 @@ export default function NotFoundPage() {
         <br />
         <Link to="/">Wróć do strony głównej.</Link>.
       </p>
-    </main>
+    </Page>
   )
 }

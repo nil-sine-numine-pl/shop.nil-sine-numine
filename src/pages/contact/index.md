@@ -2,7 +2,7 @@
 templateKey: contact-page
 slug: /contact
 date: 2020-05-04
-title: Contact
+title: Kontakt
 ---
 **Kurnik Polski**
 

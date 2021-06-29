@@ -4,6 +4,7 @@ import { CartProvider } from "use-shopping-cart"
 import Cart from "./cart"
 import Products from "./products"
 import { Page } from "../../components/page"
+import { Lined, H1 } from '../../components/lined'
 
 export default () => {
   return (
@@ -17,7 +18,7 @@ export default () => {
         billingAddressCollection={true}
       >
         <Page>
-          <h1>Kawa i rękodzieła ☕</h1>
+          <Lined><H1>Kawa i rękodzieła</H1></Lined>
           <Products />
           <Cart />
         </Page>

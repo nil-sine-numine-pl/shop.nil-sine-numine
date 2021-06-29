@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Page } from "../components/page"
+import { Lined, H1 } from '../components/lined'
 
 export default ({ data }) => {
   const { markdownRemark } = data
   const { html } = markdownRemark
   return (
     <Page>
-      <h1>Kontakt</h1>
+      <Lined><H1>{markdownRemark.frontmatter.title}</H1></Lined>
       <div style={{textAlign: 'center'}}
         dangerouslySetInnerHTML={{ __html: html }}
       />
