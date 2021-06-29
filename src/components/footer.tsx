@@ -5,12 +5,6 @@ import { Lined } from './lined'
 import { Sizes } from './consts'
 import { Link } from 'gatsby'
 
-const Icon = styled.img({
-  width: '2rem',
-  height: '2rem', 
-  color: 'white'
-})
-
 const StyledFooter = styled.footer({
   marginTop: `4rem`,
   backgroundColor: '#f0f0f0',
@@ -19,6 +13,7 @@ const StyledFooter = styled.footer({
 
 const FooterGrid = styled.div({
   display: 'grid',
+  padding: '1rem',
   gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', // 'minmax(560px, auto)  minmax(560px, auto)'
 })
 
