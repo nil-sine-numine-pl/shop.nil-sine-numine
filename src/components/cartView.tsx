@@ -18,6 +18,7 @@ const CartViewBox = styled.div({
     marginRight: 'auto',
     boxSizing: 'border-box',
     boxShadow: '0 0 .4rem #a4a4a4',
+    zIndex: 1,
     left:0,
     right:0,
     img: {
