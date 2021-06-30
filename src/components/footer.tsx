@@ -47,7 +47,7 @@ export const Footer = () => {
         </tr>
         <tr>
           <td style={{fontFamily:'montserrat'}}>Nowe Miasto 10, 16-080 Tykocin</td>
-          <td style={{fontFamily:'montserrat'}}>00 0000 0000 0000 0000</td>
+          <td style={{fontFamily:'montserrat'}}>07 8060 0004 0710 1531 2000 0010</td>
         </tr>
         <tr>
           <td style={{padding: '2px'}}><StaticImage src="../images/mail.webp" alt="mail" placeholder="blurred"/></td>
