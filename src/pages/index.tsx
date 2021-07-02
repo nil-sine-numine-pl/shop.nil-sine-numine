@@ -28,7 +28,7 @@ export default () =>
     </Section>
     <Section>
     <Lined><H1>Sklep</H1></Lined>
-    <p>Już wkrótce będziesz mógł nas wesprzeć kupując kawę! Jeśli można mieć dobrą kawę z górnej półki i przy okazji pomóc dziecią, to chyba warto? Zajrzyj do nas wkrótce.</p>
+    <p>Już wkrótce będziesz mógł nas wesprzeć kupując kawę! Jeśli można mieć dobrą kawę z górnej półki i przy okazji pomóc dzieciom, to chyba warto? Zajrzyj do nas wkrótce.</p>
     </Section>
   </Page>
   <Section style={{display: "grid", placeItems: 'center'}}>
