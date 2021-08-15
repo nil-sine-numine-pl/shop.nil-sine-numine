@@ -15,7 +15,7 @@ export default () =>
   const cartInfo = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {id: {}, frontmatter: {id: {eq: "home"}}}) {
+        allMarkdownRemark(filter: {id: {}, frontmatter: {id: {eq: "index-about"}}}) {
           nodes {
             html
           }
@@ -28,7 +28,7 @@ export default () =>
     <Page style={{textAlign:"center"}}>
       <Section>
         <Lined><H1>O Fundacji</H1></Lined>
-        <p dangerouslySetInnerHTML={{ __html: cartInfo.about }}></p>
+        <p dangerouslySetInnerHTML={{ __html: cartInfo }}></p>
         <StaticImage src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  />
       </Section>
       <Section>

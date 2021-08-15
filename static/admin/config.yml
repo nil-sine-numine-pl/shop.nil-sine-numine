@@ -19,17 +19,17 @@ collections:
         label: "Index: O fundacji"
         name: "index-about"
         fields:
-          - {label: "O Fundacji", name: "about", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/index-coffee.md"
         label: "Index: Manufaktura kawy"
         name: "index-coffee"
         fields:
-          - {label: "Manufaktura kawy", name: "coffee", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/index-shop.md"
         label: "Index: Sklep"
         name: "index-shop"
         fields:
-          - {label: "Sklep", name: "shop", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
