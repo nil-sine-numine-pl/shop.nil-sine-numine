@@ -33,6 +33,12 @@ export default () =>
           <p dangerouslySetInnerHTML={{ __html: mission }}></p>
         {/* <StaticImage src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  /> */}
       </Section>
+      <Section>
+        <Lined><H1>Zarząd fundacji</H1></Lined>
+          <p dangerouslySetInnerHTML={{ __html: managment }}></p>
+          <p dangerouslySetInnerHTML={{ __html: barbara }}></p>
+          <p dangerouslySetInnerHTML={{ __html: man }}></p>
+      </Section>
     </Page>
     <Section style={{display: "grid", placeItems: 'center'}}>
       <StaticImage style={{gridArea: "1/1"}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
