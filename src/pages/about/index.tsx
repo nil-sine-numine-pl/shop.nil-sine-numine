@@ -1,7 +1,7 @@
 import React from 'react'
-import { Lined, H1 } from '../components/lined'
+import { Lined, H1 } from '../../components/lined'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Page } from '../components/page'
+import { Page } from '../../components/page'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -15,7 +15,7 @@ export default () =>
   const pages = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {id: {}, frontmatter: {id: {in: ["index-about", "index-coffee", "index-shop"]}}}) {
+        allMarkdownRemark(filter: {id: {}, frontmatter: {id: {in: ["about-mission", "about-managment", "about-barbara", "about-man"]}}}) {
           nodes {
             html
           }
@@ -23,24 +23,15 @@ export default () =>
       }`
   ).allMarkdownRemark.nodes
 
-  const [ about, coffee, shop ] = 
-    [ pages[2].html, pages[1].html, pages[0].html ];
+  const [ mission, managment, man, barbara ] = 
+    [ pages[2].html, pages[2].html, pages[1].html, pages[0].html ];
 
   return <>
     <Page style={{textAlign:"center"}}>
       <Section>
-        <Lined><H1>O Fundacji</H1></Lined>
-          <p dangerouslySetInnerHTML={{ __html: about }}></p>
+        <Lined><H1>Misja fundacji</H1></Lined>
+          <p dangerouslySetInnerHTML={{ __html: mission }}></p>
         <StaticImage src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  />
-      </Section>
-      <Section>
-        <Lined><H1>Manufaktura kawy</H1></Lined>
-          <p dangerouslySetInnerHTML={{ __html: coffee }}></p>
-        <StaticImage src="../images/coffee_factory.webp" alt="Manufaktura kawy" placeholder="blurred"  />
-      </Section>
-      <Section>
-      <Lined><H1>Sklep</H1></Lined>
-        <p dangerouslySetInnerHTML={{ __html: shop }}></p>
       </Section>
     </Page>
     <Section style={{display: "grid", placeItems: 'center'}}>
