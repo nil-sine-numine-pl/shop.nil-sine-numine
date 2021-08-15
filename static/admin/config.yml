@@ -15,13 +15,20 @@ collections:
   - name: "pages"
     label: "Pages"
     files: 
-      - file: "src/pages/index.md"
-        label: "Home"
-        name: "home"
+      - file: "src/pages/index-about.md"
+        label: "Index: O fundacji"
+        name: "index-about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "O Fundacji", name: "about", widget: "markdown"}
+      - file: "src/pages/index-coffee.md"
+        label: "Index: Manufaktura kawy"
+        name: "index-coffee"
+        fields:
           - {label: "Manufaktura kawy", name: "coffee", widget: "markdown"}
+      - file: "src/pages/index-shop.md"
+        label: "Index: Sklep"
+        name: "index-shop"
+        fields:
           - {label: "Sklep", name: "shop", widget: "markdown"}
       - file: "src/pages/about/index.md"
         label: "About"
