@@ -31,7 +31,7 @@ export default () =>
       <Section>
         <Lined><H1>Misja fundacji</H1></Lined>
           <p dangerouslySetInnerHTML={{ __html: mission }}></p>
-        <StaticImage src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  />
+        {/* <StaticImage src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  /> */}
       </Section>
     </Page>
     <Section style={{display: "grid", placeItems: 'center'}}>
