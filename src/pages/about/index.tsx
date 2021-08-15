@@ -37,7 +37,7 @@ export default () =>
     <Section style={{display: "grid", placeItems: 'center'}}>
       <StaticImage style={{gridArea: "1/1"}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
       <Link aria-label="Blog" style={{gridArea: "1/1", position: 'relative'}} to="/blog/">
-        <h1 style={{color: 'white', fontFamily: 'playfair', fontSize:'4rem'}}>Czytaj blog</h1>
+        <h1 style={{color: 'white', fontFamily: 'playfair', fontSize:'4rem'}}>Jak możesz pomóc?</h1>
       </Link>
     </Section>
   </>
