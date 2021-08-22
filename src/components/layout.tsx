@@ -37,12 +37,12 @@ body {
    margin: 0;
    font-family: 'montserrat';
    overflowY: 'scroll';
+   line-height: 1.6rem;
 }
 table {borderSpacing: 0};
 iframe {
   width: '100%';
 }
-h1 { margin: 0 }
 a {
   color: ${Colors.font};
   text-decoration: none;
@@ -85,8 +85,7 @@ const Navigation = styled.div({
   right: 0,
   zIndex: 1,
   paddingTop: '1rem',
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  borderBottom: '1px solid white',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)'
 })
 const Title = styled.div({
   gridArea: "1/1",
@@ -97,17 +96,19 @@ const Title = styled.div({
 })
 const WhiteLine = styled.div({ 
   borderBottom: '1px solid white',
-  paddingTop: '1rem'
+  borderTop: '1px solid white',
+  marginTop: '1rem',
+  paddingTop: '0.5rem'
 })
 
 const WhitleLineButton = styled.button({
   border: '1px solid white',
   background: 'none',
   fontFamily: 'montserrat-semibold',
-  fontsize: '1rem',
+  fontSize: '1rem',
   color: 'white',
   margin: '1rem',
-  padding: '0.5rem 1rem 0.5rem 1rem',
+  padding: '0.81rem 1.88rem 0.81rem 1.88rem',
   cursor: 'pointer'
 })
 
@@ -151,10 +152,10 @@ export default function Layout({ children }) {
         </HeaderContent>
         <Title>
             <section>
-              <h1 style={{color: 'white', fontFamily: 'playfair', fontSize:'5rem'}}>Nil Sine Numine</h1>
-              <h1 style={{color: 'white', fontFamily: 'montserrat', fontSize:'2rem'}}>Nic bez woli bożej</h1>
+              <h1 style={{color: 'white', fontFamily: 'playfair', fontSize:'5rem', fontWeight: 500, marginBottom: '3rem' }}>Nil Sine Numine</h1>
+              <h1 style={{color: 'white', fontFamily: 'montserrat', fontSize:'2rem', fontWeight: 500}}>Nic bez woli bożej</h1>
               <Link to="/about/">
-                <WhitleLineButton>O FUNDACJI</WhitleLineButton>
+                <WhitleLineButton>PRZECZYTAJ O FUNDACJI</WhitleLineButton>
               </Link>
             </section>
           </Title>

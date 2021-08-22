@@ -1,12 +1,16 @@
 import styled from '@emotion/styled'
 import useSiteMetadata from './siteMetadata'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Lined } from './lined'
+import { RawLined as Lined } from './lined'
 import { Sizes } from './consts'
 import { Link } from 'gatsby'
+import kontaktSvg from '../images/kontakt.svg'
 
 const StyledFooter = styled.footer({
-  marginTop: `4rem`,
+  marginTop: '3.5rem',
+  paddingTop: `5rem`,
+  paddingBottom: '5rem',
+  fontSize: '0.875rem',
   backgroundColor: '#f0f0f0',
   fontFamily: 'montserrat-semibold'
 })
@@ -22,11 +26,11 @@ export const Footer = () => {
   return(
     <StyledFooter>
       <section style={{maxWidth: Sizes.pageMaxWidth, margin: 'auto auto auto auto'}}>
-        <Lined>
+        <Lined >
           <StaticImage style={{margin: '0 1rem 1.5rem 1rem'}} src="../images/footer_logo.webp" alt="mail" placeholder="blurred"/>
         </Lined>
         <FooterGrid>
-        <table style={{ borderSpacing: '0 1rem'}}>
+        <table style={{ borderSpacing: '0'}}>
         <tbody>
         <tr>
           <td style={{width:'50%'}}><Link aria-label="O Fundacji" to="/about/">O FUNDACJI</Link ></td>
@@ -38,7 +42,7 @@ export const Footer = () => {
         </tr>
         <tr>
           <td><Link aria-label="Pomagaj z nami" to="/">POMAGAJ Z NAMI</Link></td>
-          <td><a title="polityka prywatności" target="_blank" href={footerFileUrl} rel="noopener noreferrer">Polityka prywatności</a></td>
+          <td><a title="polityka prywatności" target="_blank" href={footerFileUrl} rel="noopener noreferrer">POLITYKA PRYWATNOŚCI</a></td>
         </tr>
         </tbody>
       </table>
@@ -53,7 +57,7 @@ export const Footer = () => {
           <td style={{fontFamily:'montserrat'}}>07 8060 0004 0710 1531 2000 0010</td>
         </tr>
         <tr>
-          <td style={{padding: '2px'}}><StaticImage src="../images/mail.webp" alt="mail" placeholder="blurred"/></td>
+          <td style={{height:'18px'}}><img src={kontaktSvg} style={{width: '160px', height: '18px'}}></img></td>
           <td><a title="polityka prywatności" target="_blank" href="/statut.pdf" rel="noopener noreferrer">Statut fundacji</a></td>
         </tr>
       </tbody>

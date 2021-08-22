@@ -11,7 +11,16 @@ const HeaderContainer = styled.div({
     display: 'flex',
     alignItems: 'stretch',
     marginLeft: '1rem',
-    marginRight: '1rem'
+    marginRight: '1rem',
+    marginTop: '4.375rem',
+    marginBottom: '3.438rem'
+})
+
+const RawContainer = styled.div({
+    display: 'flex',
+    alignItems: 'stretch',
+    marginLeft: '1rem',
+    marginRight: '1rem',
 })
 
 const Line = styled.span({
@@ -27,7 +36,14 @@ const Line = styled.span({
     }
 })
 
-export const Lined = (props) => 
+const Lined = (props) => 
 <HeaderContainer>
     <Line/> {props.children} <Line/>
 </HeaderContainer>
+
+const RawLined = (props) => 
+<RawContainer>
+    <Line/> {props.children} <Line/>
+</RawContainer>
+
+export {Lined, RawLined}
