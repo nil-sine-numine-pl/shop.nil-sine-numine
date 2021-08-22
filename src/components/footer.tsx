@@ -27,6 +27,7 @@ export const Footer = () => {
         </Lined>
         <FooterGrid>
         <table style={{ borderSpacing: '0 1rem'}}>
+        <tbody>
         <tr>
           <td style={{width:'50%'}}><Link aria-label="O Fundacji" to="/about/">O FUNDACJI</Link ></td>
           <td><Link aria-label="Sklep" to="/shop/">SKLEP</Link></td>
@@ -39,8 +40,10 @@ export const Footer = () => {
           <td><Link aria-label="Pomagaj z nami" to="/">POMAGAJ Z NAMI</Link></td>
           <td><a title="polityka prywatności" target="_blank" href={footerFileUrl} rel="noopener noreferrer">Polityka prywatności</a></td>
         </tr>
+        </tbody>
       </table>
       <table style={{ borderSpacing: '0 1rem'}}>
+        <tbody>
         <tr>
           <td style={{width:'50%'}}>FUNDACJA NIL SINE NUMINE</td>
           <td>Numer konta bankowego:</td>
@@ -53,6 +56,7 @@ export const Footer = () => {
           <td style={{padding: '2px'}}><StaticImage src="../images/mail.webp" alt="mail" placeholder="blurred"/></td>
           <td><a title="polityka prywatności" target="_blank" href="/statut.pdf" rel="noopener noreferrer">Statut fundacji</a></td>
         </tr>
+      </tbody>
       </table>
       </FooterGrid>
       </section>
