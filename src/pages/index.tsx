@@ -5,6 +5,11 @@ import { Page } from '../components/page'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Button } from '../components/button'
+import styled from '@emotion/styled'
+
+let Break = styled.div({
+  marginTop: '1.5rem'
+})
 
 export default () => 
 {
@@ -29,10 +34,12 @@ export default () =>
           <Link to="/about/">
             <Button>WIĘCEJ O FUNDACJI</Button>
           </Link>
-        <StaticImage class="image-marginTop" src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  />
+        <Break/>
+        <StaticImage src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  />
         <Lined><H1>Manufaktura kawy</H1></Lined>
           <section dangerouslySetInnerHTML={{ __html: coffee }}></section>
-        <StaticImage class="image-marginTop" src="../images/coffee_factory.webp" alt="Manufaktura kawy" placeholder="blurred"  />
+        <Break/>
+        <StaticImage src="../images/coffee_factory.webp" alt="Manufaktura kawy" placeholder="blurred"  />
         <Lined><H1>Sklep</H1></Lined>
         <section dangerouslySetInnerHTML={{ __html: shop }}></section>
         <Link to="/shop/">
