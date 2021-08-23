@@ -14,25 +14,30 @@ let Section = styled.section({
 const PersonSectionRight = styled.section({
   display: 'flex',
   alignItems: 'center',
+  '@media (orientation: portrait)': {flexDirection: `column-reverse`, textAlign:'center'},
   textAlign: 'right',
   'h2': { marginBottom: '0' },
   'p': { marginTop: '0' },
   '.gatsby-image-wrapper': {
     marginLeft: '1rem',
     width: '100%'
+  },
+  img: {
+    objectFit: 'contain'
   }
 })
 
 const PersonSectionLeft = styled.section({
   display: 'flex',
   alignItems: 'center',
+  '@media (orientation: portrait)': {flexDirection: `column`, textAlign:'center'},
   textAlign: 'left',
   'h2': { marginBottom: '0' },
   'p': { marginTop: '0' },
   '.gatsby-image-wrapper': {
     marginRight: '1rem',
     width: '100%'
-  }
+  },
 })
 
 export default () => 
@@ -62,10 +67,10 @@ export default () =>
           <p dangerouslySetInnerHTML={{ __html: managment }}></p>
           <PersonSectionRight>
             <span dangerouslySetInnerHTML={{ __html: barbara }}></span>
-            <StaticImage src="../../images/barbara.webp" alt="Barbara" placeholder="blurred" />
+            <StaticImage objectFit='contain' src="../../images/barbara.webp" alt="Barbara" placeholder="blurred" />
           </PersonSectionRight>
           <PersonSectionLeft>
-            <StaticImage src="../../images/vice.webp" alt="Barbara" placeholder="blurred" />  
+            <StaticImage objectFit='contain' src="../../images/vice.webp" alt="Barbara" placeholder="blurred" />  
             <span dangerouslySetInnerHTML={{ __html: man }}></span>
           </PersonSectionLeft>
       </Section>
