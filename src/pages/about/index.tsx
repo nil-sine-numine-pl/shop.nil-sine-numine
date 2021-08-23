@@ -19,7 +19,7 @@ const PersonSectionRight = styled.section({
   'h2': { marginBottom: '0' },
   'p': { marginTop: '0' },
   '.gatsby-image-wrapper': {
-    marginLeft: '1rem',
+    '@media (orientation: landscape)': {marginLeft: '1rem',},
     width: '100%'
   },
   img: {
@@ -35,7 +35,7 @@ const PersonSectionLeft = styled.section({
   'h2': { marginBottom: '0' },
   'p': { marginTop: '0' },
   '.gatsby-image-wrapper': {
-    marginRight: '1rem',
+    '@media (orientation: landscape)': {marginRight: '1rem',},
     width: '100%'
   },
 })
@@ -60,11 +60,11 @@ export default () =>
     <Page style={{textAlign:"center"}}>
       <Section>
         <Lined><H1>Misja fundacji</H1></Lined>
-          <p dangerouslySetInnerHTML={{ __html: mission }}></p>
+          <section dangerouslySetInnerHTML={{ __html: mission }}></section>
       </Section>
       <Section>
         <Lined><H1>Zarząd fundacji</H1></Lined>
-          <p dangerouslySetInnerHTML={{ __html: managment }}></p>
+          <section dangerouslySetInnerHTML={{ __html: managment }}></section>
           <PersonSectionRight>
             <span dangerouslySetInnerHTML={{ __html: barbara }}></span>
             <StaticImage objectFit='contain' src="../../images/barbara.webp" alt="Barbara" placeholder="blurred" />
@@ -83,7 +83,7 @@ export default () =>
       </Section>
     </Page>
     <Section style={{display: "grid", placeItems: 'center'}}>
-      <StaticImage style={{gridArea: "1/1"}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
+      <StaticImage style={{gridArea: "1/1", minHeight: '12rem'}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
       <Link aria-label="Blog" style={{gridArea: "1/1", position: 'relative'}} to="/blog/">
         <h1 style={{color: 'white', fontWeight: 500 ,fontFamily: 'playfair', fontSize:'4rem'}}>Jak możesz pomóc?</h1>
       </Link>

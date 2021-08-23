@@ -108,9 +108,7 @@ const Socials = styled.div({
   display: 'inline',
   '@media (orientation: portrait)': 
   {
-    position: `absolute`,
-    top: `2rem`,
-    right: `15%`
+    marginLeft: '0',
   },
   marginLeft: '6%',
   'img': {
