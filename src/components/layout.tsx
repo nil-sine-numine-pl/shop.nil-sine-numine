@@ -9,6 +9,8 @@ import { Footer} from './footer'
 import Helmet from 'react-helmet'
 import useSiteMetadata from './siteMetadata'
 import { withPrefix } from 'gatsby'
+import fbSvg from '../images/fb_icon.svg'
+import instaSvg from '../images/insta_icon.svg'
 
 type LinksProps = {
   display: string
@@ -84,6 +86,7 @@ const Navigation = styled.div({
   left: 0,
   right: 0,
   zIndex: 1,
+  whiteSpace: 'nowrap',
   paddingTop: '1rem',
   backgroundColor: 'rgba(0, 0, 0, 0.5)'
 })
@@ -99,6 +102,17 @@ const WhiteLine = styled.div({
   borderTop: '1px solid white',
   marginTop: '1rem',
   paddingTop: '0.5rem'
+})
+
+const Socials = styled.div({
+   display: 'inline',
+   marginLeft: '7%',
+  'img': {
+    height: '2rem'
+  },
+  'img:last-child': {
+    marginLeft: '1rem'
+  }
 })
 
 const WhitleLineButton = styled.button({
@@ -145,6 +159,10 @@ export default function Layout({ children }) {
               <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="O Fundacji" to="/about/">O FUNDACJI</Link >
               <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Kontakt" to="/contact/">KONTAKT</Link >
             </Links>
+            <Socials style={{marginLeft: active ? '7%':'0'}}>
+              <a target="_blank" href="https://www.facebook.com/KurnikPolski" rel="noopener noreferrer"><img src={fbSvg}></img></a>
+              <a target="_blank" href="https://www.instagram.com/kurnikpolski/" rel="noopener noreferrer"><img src={instaSvg}></img></a>
+            </Socials>
             <WhiteLine/>
           </Navigation>
         <HeaderContent>
