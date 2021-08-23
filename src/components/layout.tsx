@@ -105,14 +105,19 @@ const WhiteLine = styled.div({
 })
 
 const Socials = styled.div({
-   display: 'inline',
-   marginLeft: '7%',
-  'img': {
-    height: '2rem'
+  display: 'inline',
+  '@media (orientation: portrait)': 
+  {
+    position: `absolute`,
+    top: `2rem`,
+    right: `15%`
   },
-  'img:last-child': {
-    marginLeft: '1rem'
-  }
+  marginLeft: '6%',
+  'img': {
+    height: '2rem',
+    marginRight: '0.5rem',
+    marginLeft: '0.5rem'
+  },
 })
 
 const WhitleLineButton = styled.button({
@@ -159,7 +164,7 @@ export default function Layout({ children }) {
               <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="O Fundacji" to="/about/">O FUNDACJI</Link >
               <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Kontakt" to="/contact/">KONTAKT</Link >
             </Links>
-            <Socials style={{marginLeft: active ? '7%':'0'}}>
+            <Socials>
               <a target="_blank" href="https://www.facebook.com/KurnikPolski" rel="noopener noreferrer"><img src={fbSvg}></img></a>
               <a target="_blank" href="https://www.instagram.com/kurnikpolski/" rel="noopener noreferrer"><img src={instaSvg}></img></a>
             </Socials>
