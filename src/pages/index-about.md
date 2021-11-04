@@ -2,9 +2,4 @@
 templateKey: none
 id: index-about
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt, mollit anim id est laborum.
+  Fundacja „Nil Sine Numine” powstała w 2020 roku aby wspierać inicjatywę organizacji wartościowego wypoczynku dla dzieci i młodzieży z pieczy zastępczej organizowaną od 10 lat przez fundatora. Pandemia spowodowała pogorszenie dostępu do środków finansowych przeznaczanych przez  domy dziecka na ten cel. Niepewność ekonomiczna firm i indywidualnych sponsorów oraz fakt, iż wypoczynek może wydawać się potrzebą nie z pierwszego rzędu sprawiły trudności w wyjazdach dzieci na wakacje. Pragniemy, aby dzieci miały równy dostęp do wypoczynku . Jednocześnie jest to inicjatywa, która przy pomocy osób wspierających naszą aktywność ma szansę na samofinansowanie się dzięki takim innowacyjnym pomysłom jak stworzenie marki własnej kawy oraz organizacja wypoczynku komercyjnego dla wszystkich dzieci .
