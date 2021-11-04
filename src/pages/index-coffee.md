@@ -2,4 +2,6 @@
 templateKey: none
 id: index-coffee
 ---
-Ut coffee enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Kawa to czarne złoto , drugi po ropie naftowej surowiec, którym handluje się na światowej giełdzie. 
+Legenda głosi, że odkryta została przez  etiopskiego pasterza, który odkrył powód pobudzenia i energii swoich kóz pożywiających się czerwonymi wiśniami kawowca, a następnie spróbował ich sam. Wydarzenie to mogło mieć swoje miejsce około tysiąca lat przed naszą erą. Jednak swoją popularność kawa zyskała  w krajach arabskich jeszcze przed XV wiekiem. 
+Zobacz jak wygląda proces  od wzrostu kawy do jej konsumpcji :
