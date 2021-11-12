@@ -85,7 +85,7 @@ export default () =>
       </Section>
     </Page>
     <Section style={{display: "grid", placeItems: 'center'}}>
-      <StaticImage style={{gridArea: "1/1", minHeight: '20rem'}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
+      <StaticImage style={{gridArea: "1/1", minHeight: '20rem', width: '100%'}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
       <Link aria-label="Blog" style={{gridArea: "1/1", position: 'relative'}} to="/blog/">
         <h1 style={{color: 'white', fontWeight: 500 ,fontFamily: 'playfair', fontSize:'4rem', lineHeight: '5rem', textAlign: 'center'}}>Jak możesz pomóc?</h1>
       </Link>

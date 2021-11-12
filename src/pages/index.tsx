@@ -47,7 +47,7 @@ export default () =>
         </Link>
     </Page>
     <section style={{display: "grid", placeItems: 'center'}}>
-      <StaticImage style={{gridArea: "1/1", marginTop: '3rem', minHeight: '12rem'}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
+      <StaticImage style={{gridArea: "1/1", marginTop: '3rem', minHeight: '12rem', width: '100%'}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
       <Link aria-label="Blog" style={{gridArea: "1/1", position: 'relative'}} to="/blog/">
         <h1 style={{color: 'white', fontFamily: 'playfair', fontWeight: 500, fontSize:'4rem'}}>Czytaj blog</h1>
       </Link>
