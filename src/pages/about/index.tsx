@@ -20,6 +20,7 @@ const PersonSectionRight = styled.section({
   'p': { marginTop: '0' },
   '.gatsby-image-wrapper': {
     '@media (orientation: landscape)': {marginLeft: '1rem',},
+    minWidth: '250px',
     width: '100%'
   },
   img: {
@@ -36,7 +37,8 @@ const PersonSectionLeft = styled.section({
   'p': { marginTop: '0' },
   '.gatsby-image-wrapper': {
     '@media (orientation: landscape)': {marginRight: '1rem',},
-    width: '100%'
+    width: '100%',
+    minWidth: '250px'
   },
 })
 
@@ -83,7 +85,7 @@ export default () =>
       </Section>
     </Page>
     <Section style={{display: "grid", placeItems: 'center'}}>
-      <StaticImage style={{gridArea: "1/1", minHeight: '12rem'}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
+      <StaticImage style={{gridArea: "1/1", minHeight: '20rem'}} src="../images/blog.webp" alt="Blog" placeholder="blurred"  />
       <Link aria-label="Blog" style={{gridArea: "1/1", position: 'relative'}} to="/blog/">
         <h1 style={{color: 'white', fontWeight: 500 ,fontFamily: 'playfair', fontSize:'4rem', lineHeight: '5rem', textAlign: 'center'}}>Jak możesz pomóc?</h1>
       </Link>

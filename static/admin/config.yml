@@ -30,24 +30,24 @@ collections:
         label: "Index: Sklep"
         name: "index-shop"
         fields:
-    # About
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/about/about-mission.md"
+      # About
+      - file: "src/pages/about/mission.md"
         label: "O fundacji: Misja"
         name: "about-mission"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/about/about-managment.md"
+      - file: "src/pages/about/managment.md"
         label: "O fundacji: Zarząd"
         name: "about-managment"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/about/about-barbara.md"
+      - file: "src/pages/about/barbara.md"
         label: "O fundacji: Barbara"
         name: "about-barbara"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/about/about-man.md"
+      - file: "src/pages/about/man.md"
         label: "O fundacji: Imie Naziwko"
         name: "about-man"
         fields:
