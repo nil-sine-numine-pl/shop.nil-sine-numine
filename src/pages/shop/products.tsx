@@ -38,9 +38,6 @@ export default () => {
             id
             currency
             unit_amount
-            metadata {
-              quantity
-            }
             product {
               id
               name
