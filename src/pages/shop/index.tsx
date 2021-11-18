@@ -7,12 +7,13 @@ import { Page } from "../../components/page"
 import { Lined, H1 } from '../../components/lined'
 
 export default () => {
+  const isBrowser = () => typeof window !== "undefined"
   return (
       <CartProvider
         mode="client-only"
         stripe={getStripe()}
-        successUrl={`${window.location.origin}/thanks/`}
-        cancelUrl={`${window.location}`}
+        successUrl={`${isBrowser && window.location.origin}/thanks/`}
+        cancelUrl={`${isBrowser && window.location}`}
         currency="PLN"
         allowedCountries={['PL']}
         billingAddressCollection={true}
