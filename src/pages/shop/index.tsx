@@ -11,8 +11,8 @@ export default () => {
       <CartProvider
         mode="client-only"
         stripe={getStripe()}
-        successUrl={`https://nilsinenumine.netlify.app/thanks/`}
-        cancelUrl={`https://nilsinenumine.netlify.app/`}
+        successUrl={`https://numine.pl/thanks/`}
+        cancelUrl={`https://numine.pl/shop/`}
         currency="PLN"
         allowedCountries={['PL']}
         billingAddressCollection={true}
