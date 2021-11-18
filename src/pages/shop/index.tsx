@@ -12,8 +12,8 @@ export default () => {
       <CartProvider
         mode="client-only"
         stripe={getStripe()}
-        successUrl={`${isBrowser && window.location.origin}/thanks/`}
-        cancelUrl={`${isBrowser && window.location}`}
+        successUrl={`${isBrowser() && window.location.origin}/thanks/`}
+        cancelUrl={`${isBrowser() && window.location}`}
         currency="PLN"
         allowedCountries={['PL']}
         billingAddressCollection={true}
