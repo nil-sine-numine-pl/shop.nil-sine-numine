@@ -41,7 +41,7 @@ Kawa jest idealną skarbnicą przeciwutleniaczy, które niszczą wolne rodniki i
 
 **9. Kawa a przyjemność.**
 
-Chyba nie musimy wspominać ile radości daje wypicie filiżanki kawy w dobrym towarzystwie? Poza tym kawa stanowi [doskonały upominek](https://numine.pl/shop/), który zawsze będzie trafiony. Znacie osobę, która nie lubi kawy? My nie!
+Chyba nie musimy wspominać ile radości daje wypicie filiżanki kawy w dobrym towarzystwie? Poza tym kawa stanowi ***[doskonały upominek](https://numine.pl/shop/)***, który zawsze będzie trafiony. Znacie osobę, która nie lubi kawy? My nie!
 
 To tylko niektóre pozytywy wynikające z picia kawy w umiarkowanych ilościach, a jest ich naprawdę o wiele, wiele więcej! 
 
