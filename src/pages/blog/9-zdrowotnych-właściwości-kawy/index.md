@@ -44,3 +44,5 @@ Kawa jest idealną skarbnicą przeciwutleniaczy, które niszczą wolne rodniki i
 Chyba nie musimy wspominać ile radości daje wypicie filiżanki kawy w dobrym towarzystwie? Poza tym kawa stanowi doskonały upominek, który zawsze będzie trafiony. Znacie osobę, która nie lubi kawy? My nie!
 
 To tylko niektóre pozytywy wynikające z picia kawy w umiarkowanych ilościach, a jest ich naprawdę o wiele, wiele więcej!
+
+![](9-zdrowotnych-właściwości-kawy.jpg "9 zdrowotnych właściwości kawy")
