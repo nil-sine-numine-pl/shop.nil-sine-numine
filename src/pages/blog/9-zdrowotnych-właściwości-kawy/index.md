@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 9 zdrowotnych właściwości kawy
-description: Czy kawa szkodzi? Jak kawa wpływa na nasze zdrowie!
+description: Czy kawa szkodzi? Jak kawa wpływa na nasze zdrowie?
 date: 2021-12-08T11:13:50.603Z
 featuredimage: 9-zdrowotnych-właściwości-kawy.jpg
 ---
