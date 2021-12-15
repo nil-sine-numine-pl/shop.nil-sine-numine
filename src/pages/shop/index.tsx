@@ -9,20 +9,20 @@ import { Lined, H1 } from '../../components/lined'
 export default () => {
   const isBrowser = () => typeof window !== "undefined"
   return (
-      <CartProvider
-        mode="client-only"
-        stripe={getStripe()}
-        successUrl={`${isBrowser() && window.location.origin}/thanks/`}
-        cancelUrl={`${isBrowser() && window.location}`}
-        currency="PLN"
-        allowedCountries={['PL']}
-        billingAddressCollection={true}
-      >
-        <Page>
-          <Lined><H1>Kawa i rękodzieła</H1></Lined>
-          <Products />
-          <Cart />
-        </Page>
-      </CartProvider>
+    <CartProvider
+      mode="client-only"
+      stripe={getStripe()}
+      successUrl={`${isBrowser() && window.location.origin}/thanks/`}
+      cancelUrl={`${isBrowser() && window.location}`}
+      currency="PLN"
+      allowedCountries={['PL']}
+      billingAddressCollection={true}
+    >
+      <Page>
+        <Lined><H1>Kawa i rękodzieła</H1></Lined>
+        <Cart />
+        <Products />
+      </Page>
+    </CartProvider>
   )
 }
