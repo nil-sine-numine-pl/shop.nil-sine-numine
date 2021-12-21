@@ -2,7 +2,7 @@
 templateKey: none
 id: barbara
 ---
-## Barbara Gębała
+### Barbara Gębała
 
 Prezes i założycielka fundacji „Nil Sine Numine”
 
