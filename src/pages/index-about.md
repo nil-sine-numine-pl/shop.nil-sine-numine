@@ -2,7 +2,7 @@
 templateKey: none
 id: index-about
 ---
-**Fundacja „Nil Sine Numine”** powstała w 2020 roku, aby wspierać inicjatywę organizacji wartościowego wypoczynku dla dzieci i młodzieży z pieczy zastępczej, organizowaną od 10 lat przez fundatora. 
+**Fundacja „Nil Sine Numine”** powstała w 2020 roku, aby wspierać inicjatywę organizacji wartościowego wypoczynku dla dzieci i młodzieży z pieczy zastępczej, organizowaną od 10 lat przez Fundatora. 
 
 
 
