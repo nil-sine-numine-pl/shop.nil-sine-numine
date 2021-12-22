@@ -5,6 +5,8 @@ description: Czy kawa szkodzi? Jak kawa wpływa na nasze zdrowie?
 date: 2021-12-08T11:13:50.603Z
 featuredimage: 9-zdrowotnych-właściwości-kawy.jpg
 ---
+## Czy kawa szkodzi? Jak kawa wpływa na nasze zdrowie?
+
 Wiele osób nie wyobraża sobie rozpoczęcia dnia bez filiżanki lub kubka pysznej, aromatycznej kawy. Niektórzy też nie mają pojęcia jaki pozytywny wpływ na nasz organizm posiada kawa. Oczywiście, że nie zastąpimy nią pożywnego śniadania, ale z pewnością będziemy cieszyć się większą energią oraz pozostałymi zaletami płynącymi z picia kawy, o których przeczytacie poniżej. Tylko pamiętajcie! Żeby czerpać korzyści z tego czarnego napoju należy zachować umiar! 3-5 filiżanek dziennie dla zdrowego człowieka to bezpieczna dawka, której regularne przekraczanie może przyniesie negatywne skutki.
 
 ### **1. Kawa na pobudzenie i koncentrację.**
