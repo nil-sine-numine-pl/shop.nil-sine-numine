@@ -6,4 +6,4 @@ id: index-about
 
 Pandemia spowodowała pogorszenie dostępu do środków finansowych przeznaczanych przez  domy dziecka na ten cel. Niepewność ekonomiczna firm i indywidualnych sponsorów oraz fakt, iż wypoczynek może wydawać się potrzebą nie z pierwszego rzędu sprawiły trudności w wyjazdach dzieci na wakacje. Pragniemy, aby dzieci miały równy dostęp do wypoczynku.
 
-Jednocześnie jest to inicjatywa, która przy pomocy osób wspierających naszą aktywność ma szansę na samofinansowanie się dzięki takim innowacyjnym pomysłom jak stworzenie **[marki własnej kawy](https://numine.pl/shop/)** oraz organizacja wypoczynku komercyjnego dla wszystkich dzieci w formie **[obozów dziecięcych](https://obozydzieciece.pl/)**, jak i **[agroturystyki](http://noclegitykocin.pl/)**.
+Jednocześnie jest to inicjatywa, która przy pomocy osób wspierających naszą aktywność ma szansę na samofinansowanie się dzięki takim innowacyjnym pomysłom jak stworzenie *[marki własnej kawy](https://numine.pl/shop/)* oraz organizacja wypoczynku komercyjnego dla wszystkich dzieci w formie *[obozów dziecięcych](https://obozydzieciece.pl/)*, jak i *[agroturystyki](http://noclegitykocin.pl/)*.
