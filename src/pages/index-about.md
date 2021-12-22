@@ -10,4 +10,4 @@ Pandemia spowodowała pogorszenie dostępu do środków finansowych przeznaczany
 
 
 
-Jednocześnie jest to inicjatywa, która przy pomocy osób wspierających naszą aktywność ma szansę na samofinansowanie się dzięki takim innowacyjnym pomysłom jak stworzenie [marki własnej kawy](https://numine.pl/shop/) oraz organizacja wypoczynku komercyjnego dla wszystkich dzieci w formie [obozów dziecięcych](https://obozydzieciece.pl/), jak i [agroturystyki](http://noclegitykocin.pl/).
+Jednocześnie jest to inicjatywa, która przy pomocy osób wspierających naszą aktywność ma szansę na samofinansowanie się dzięki takim innowacyjnym pomysłom jak stworzenie *[marki własnej kawy](https://numine.pl/shop/)* oraz organizacja wypoczynku komercyjnego dla wszystkich dzieci w formie *[obozów dziecięcych](https://obozydzieciece.pl/)*, jak i *[agroturystyki](http://noclegitykocin.pl/)*.
