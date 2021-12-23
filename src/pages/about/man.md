@@ -2,7 +2,7 @@
 templateKey: none
 id: man
 ---
-## Stanisław Gebala
+## Stanisław Gębała
 
 ### Wiceprezes Fundacji "Nil Sine Numine"
 
