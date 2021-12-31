@@ -2,7 +2,7 @@
 templateKey: none
 id: info-products
 ---
-Nasza Fundacja czerpie z tego, co dzięki Woli Bożej zostało dane człowiekowi.
+Nasza Fundacja czerpie z tego, co dzięki Woli Bożej zostało dane człowiekowi na Czarnym Lądzie.
 
 Rwanda, bo tu ma siedzibę serce naszej działalności związanej z projektem "Kawa, która pomaga", leży w środkowowschodniej Afryce. 
 
