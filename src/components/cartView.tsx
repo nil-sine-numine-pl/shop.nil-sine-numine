@@ -3,6 +3,7 @@ import { Button } from './button'
 import styled from '@emotion/styled'
 import { Colors } from './consts'
 import { price } from '../priceFormatter'
+import jumpingDots from '../images/three-dots.svg'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const CartViewBox = styled.div({
@@ -21,11 +22,10 @@ const CartViewBox = styled.div({
     zIndex: 1,
     left: 0,
     right: 0,
-    img: {
-        width: '5rem',
-        height: '5rem',
-        objectFit: 'cover',
-    }
+})
+
+const Icon = styled.img({
+    width: '75px'
 })
 
 const CartActions = styled.div({
@@ -37,7 +37,12 @@ const CartActions = styled.div({
 
 const CartItemsTable = styled.table({
     width: '100%',
-    textAlign: 'left'
+    textAlign: 'left',
+    img: {
+        width: '5rem',
+        height: '5rem',
+        objectFit: 'cover',
+    }
 })
 
 const BigEmoi = styled.div({
@@ -103,7 +108,7 @@ export default (props: { cart, onClose: () => void }) => {
                         setLoading(true)
                         cart.redirectToCheckout()
                     }}>
-                    {loading ? '...' : 'Do zapłaty'}
+                    {loading ? <Icon src={jumpingDots} alt="..." /> : 'Do zapłaty'}
                 </Button>
             </CartActions>
             <small dangerouslySetInnerHTML={{ __html: cartInfo }} />
