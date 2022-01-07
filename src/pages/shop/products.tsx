@@ -2,38 +2,21 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import ProductCard from './productCard'
 import styled from "@emotion/styled"
+import { Price } from '../../product'
 
 const Products = styled.div({
   display: 'grid',
+  marginTop: '1rem',
   gridGap: '1rem',
   '@media (orientation: portrait)': {gridTemplateColumns: '1'},
   '@media (orientation: landscape)': {gridTemplateColumns: 'repeat(2, 1fr)'},
 })
 
-interface Product {
-  id: string
-  name: string
-  description: string
-  images: string[]
-}
-
-interface Metadata {
-  quantity: string
-}
-
-interface Price {
-  id: string
-  currency: string
-  unit_amount: number
-  metadata: Metadata
-  product: Product
-}
-
 export default () => {
   const productsData = useStaticQuery(
     graphql`
       query {
-        allStripePrice(filter: {product: {active: {eq: true}}, active: {eq: true}}) {
+        allStripePrice(filter: {product: {active: {eq: true}, metadata: {shipment: {ne: "true"}}}, active: {eq: true}}) {
           nodes {
             id
             currency
@@ -45,19 +28,12 @@ export default () => {
               images
             }
           }
-        },
-        allMarkdownRemark(filter: {id: {}, frontmatter: {id: {eq: "info-products"}}}) {
-          nodes {
-            html
-          }
         }
       }`
   )
   const prices: Price[]  = productsData.allStripePrice.nodes
-  const description = productsData.allMarkdownRemark.nodes[0].html
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: description }}/>
       <Products>
         {prices.map(price => {
           const product = {

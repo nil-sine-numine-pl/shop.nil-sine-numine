@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from './button'
 import styled from '@emotion/styled'
 import { Colors } from './consts'
 import { price } from '../priceFormatter'
 import jumpingDots from '../images/three-dots.svg'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Price } from '../product'
+import { ShoppingCartUtilities } from 'use-shopping-cart'
 
 const CartViewBox = styled.div({
     maxHeight: '100vh',
@@ -52,21 +54,54 @@ const BigEmoi = styled.div({
     lineHeight: 'normal'
 })
 
-export default (props: { cart, onClose: () => void }) => {
+export default (props: { cart: ShoppingCartUtilities, onClose: () => void }) => {
     const cart = props.cart
     const [loading, setLoading] = useState(false)
-    const cartInfo = useStaticQuery(
+    const cartData = useStaticQuery(
         graphql`
           query {
+            allStripePrice(filter: {product: {active: {eq: true}, metadata: {shipment: {eq: "true"}}}, active: {eq: true}}) {
+            nodes {
+                id
+                currency
+                unit_amount
+                product {
+                    id
+                    name
+                    description
+                    images
+                }
+            }
+            },
             allMarkdownRemark(filter: {id: {}, frontmatter: {id: {eq: "info-cart"}}}) {
               nodes {
                 html
               }
             }
           }`
-    ).allMarkdownRemark.nodes[0].html
-    let cartProducts = Object.keys(cart.cartDetails)
-        .map(ix => cart.cartDetails[ix])
+    )
+    const cartInfo = cartData.allMarkdownRemark.nodes[0].html
+    const shipmentProduct = {
+        sku:cartData.allStripePrice.nodes[0].id,
+        id: cartData.allStripePrice.nodes[0].id,
+        name: cartData.allStripePrice.nodes[0].product.name,
+        price: cartData.allStripePrice.nodes[0].unit_amount,
+        currency: cartData.allStripePrice.nodes[0].currency,
+        description: cartData.allStripePrice.nodes[0].product.description,
+        image: cartData.allStripePrice.nodes[0].product.images,
+      }
+    let cartProducts = Object.keys(cart.cartDetails).map(ix => cart.cartDetails[ix])
+
+    const evaluateShipping = () => {
+        cart.removeItem(shipmentProduct.id)
+        const isShppingCharged = 
+            cartProducts.find((item) => item.sku != shipmentProduct.sku && cart.cartCount > 0)
+        if(isShppingCharged) {
+            cart.addItem(shipmentProduct)
+        }
+    }
+    
+    useEffect(() => evaluateShipping(), [])
 
     return (
         <CartViewBox>
@@ -84,13 +119,15 @@ export default (props: { cart, onClose: () => void }) => {
                         <tr>
                             <td><img src={cartItem.image} alt="" /></td>
                             <td>{cartItem.name}</td>
-                            <td style={{ whiteSpace: 'nowrap' }}>
-                                <Button onClick={() => cart.decrementItem(cartItem.id)} style={{ width: '2rem' }}>-</Button>
-                                <span style={{ width: '1.5rem', textAlign: 'center', display: 'inline-block' }}>
-                                    {cartItem.quantity}
-                                </span>
+                            {cartItem.sku !== shipmentProduct.sku 
+                            ? <td style={{ whiteSpace: 'nowrap' }}>
+                                <Button onClick={() =>{cart.decrementItem(cartItem.id); evaluateShipping()}} style={{ width: '2rem' }}>-</Button>
+                                  <span style={{ width: '1.5rem', textAlign: 'center', display: 'inline-block' }}>
+                                     {cartItem.quantity}
+                                  </span>
                                 <Button style={{ width: '2rem' }} onClick={() => cart.incrementItem(cartItem.id)}>+</Button>
-                            </td>
+                              </td>
+                            : <td></td>}
                             <td>{price(cartItem.price * cartItem.quantity / 100)}</td>
                         </tr>)}
                 </tbody>

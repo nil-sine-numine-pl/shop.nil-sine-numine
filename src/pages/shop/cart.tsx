@@ -75,7 +75,10 @@ const Cart = () => {
         <>
             <div ref={ref4CartInfoSticking}></div>
             <CartLocation isFixed={isCartPanelFixed} id="#CartPanel" onClick={() => setViewCart(true)}>
-                <h2 style={{ marginRight: '5rem' }}>Twój koszyk</h2>
+                <div style={{textAlign: 'center', marginRight: '2rem'}}>
+                    <h2 style={{ marginBottom: '0' }}>Twój koszyk</h2>
+                    <small>(Kliknij by zobaczyć szczegóły)</small>
+                </div>
                 <Circle>
                     <Icon src={cartImg} alt="Basket" />
                     <SmallCircle>
