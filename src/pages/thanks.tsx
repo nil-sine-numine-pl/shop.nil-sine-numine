@@ -5,7 +5,7 @@ export default () => {
   useEffect(() => { localStorage.clear() })
   return (
   <Page style={{textAlign:'center'}}>
-    <h1>Dziękujemy za zakupy!</h1>
-    <p style={{fontSize:'25rem', margin:'1rem'}}>💕</p>
+    <h1 style={{lineHeight: '5rem'}}>Dziękujemy za zakupy!</h1>
+    <p style={{fontSize:'15rem', margin:'1rem', lineHeight: '15rem'}}>💕</p>
   </Page>)
 }
