@@ -55,7 +55,7 @@ const CartLocation = styled.div<CartLocationProps>(
 const Cart = () => {
     const [viewCart, setViewCart] = useState(false)
     const [isCartPanelFixed, setIsCartPanelFixed] = useState(false)
-    const cartPanelRef = useRef<HTMLDivElement>()
+    const ref4CartInfoSticking = useRef<HTMLDivElement>()
     const cart = useShoppingCart()
 
     useEffect(() => {
@@ -64,8 +64,8 @@ const Cart = () => {
     }, [])
 
     let stickCart = () => {
-        //const { offsetTop } = cartPanelRef.current
-        //window.scrollY > offsetTop ? setIsCartPanelFixed(true) : setIsCartPanelFixed(false)
+        const { offsetTop } = ref4CartInfoSticking?.current
+        window.scrollY > offsetTop ? setIsCartPanelFixed(true) : setIsCartPanelFixed(false)
     }
 
     let cartProducts = Object.keys(cart.cartDetails)
@@ -73,6 +73,7 @@ const Cart = () => {
 
     return (
         <>
+            <div ref={ref4CartInfoSticking}></div>
             <CartLocation isFixed={isCartPanelFixed} id="#CartPanel" onClick={() => setViewCart(true)}>
                 <h2 style={{ marginRight: '5rem' }}>Twój koszyk</h2>
                 <Circle>
