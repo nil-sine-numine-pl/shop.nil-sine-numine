@@ -155,7 +155,7 @@ export default function Layout({ children }) {
             <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
               <StaticImage src="../images/logotyp_menu.webp" alt="Logo" placeholder="blurred"  />
             </Link>
-            <Links display={active ? 'none':'block'}>
+            <Links display={active ? 'block':'none'}>
               <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Pomagaj z nami" to="/">POMAGAJ Z NAMI</Link>
               <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Sklep" to="/shop/">SKLEP</Link>
               <Link onClick={() => setActive(!active)} activeClassName='active-link' aria-label="Blog" to="/blog/">BLOG</Link>
