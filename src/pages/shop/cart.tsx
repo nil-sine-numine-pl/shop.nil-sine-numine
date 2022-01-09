@@ -68,9 +68,6 @@ const Cart = () => {
         window.scrollY > offsetTop ? setIsCartPanelFixed(true) : setIsCartPanelFixed(false)
     }
 
-    let cartProducts = Object.keys(cart.cartDetails)
-        .map(ix => cart.cartDetails[ix]);
-
     return (
         <>
             <div ref={ref4CartInfoSticking}></div>
@@ -81,10 +78,7 @@ const Cart = () => {
                 </div>
                 <Circle>
                     <Icon src={cartImg} alt="Basket" />
-                    <SmallCircle>
-                        {cartProducts.map(product => product.quantity)
-                            .reduce((acc: number, quantity) => acc + quantity, 0)}
-                    </SmallCircle>
+                    <SmallCircle>{cart.cartCount == 0 ? 0: cart.cartCount - 1}</SmallCircle>
                 </Circle>
             </CartLocation>
             {viewCart ? <CartView cart={cart} onClose={() => setViewCart(false)}></CartView> : null}

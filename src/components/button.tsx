@@ -7,7 +7,7 @@ export const Button = styled.button({
     textDecoration: 'none',
     MozAppearance: 'none',
     WebkitAppearance: 'none',
-    height: '3rem',
+    minHeight: '3rem',
     fontSize: '1.063rem',
     padding: '.6rem',
     color: 'white',

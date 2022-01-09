@@ -1,9 +1,9 @@
 import React from 'react'
-import { useShoppingCart } from 'use-shopping-cart'
 import styled from "@emotion/styled"
 import { Colors } from '../../components/consts'
 import { Button } from '../../components/button'
 import { price } from '../../priceFormatter'
+
 const Card = styled.div({
     display: 'flex',
     backgroundColor: 'white',
@@ -26,7 +26,7 @@ const Description = styled.p({
   margin:0
 })
 
-const Product = styled.div({
+const ProductInfo = styled.div({
     marginLeft: '.5rem',
     display: 'flex',
     flexDirection: 'column',
@@ -34,20 +34,20 @@ const Product = styled.div({
     'h4': {margin: '0 0 .5rem 0'}
 })
 
-export default ({ product }) => {
+
+export default ({ product, onAdd }: {product: any; onAdd: (product: any) => void}) => {
     product = product ?? {};
-    const { addItem } = useShoppingCart()
     return (
         <Card>
             <img src={product.image} alt="" />
-            <Product>
+            <ProductInfo>
               <h4>{product.name}</h4>
               <div>
                 <Description>{product.description}</Description>
                 <p style={{color:Colors.primary, margin:0, fontSize:'1.1rem'}}>{`${price(parseInt(product.price)/100)}`}</p>
               </div>
-              <Button onClick={() => addItem(product)}>Do koszyka</Button>
-            </Product>
+              <Button onClick={() => onAdd(product)}>Do koszyka</Button>
+            </ProductInfo>
         </Card>
     )
 }

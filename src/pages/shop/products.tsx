@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import ProductCard from './productCard'
 import styled from "@emotion/styled"
 import { Price } from '../../product'
+import { ShoppingCartUtilities, useShoppingCart } from 'use-shopping-cart'
 
 const Products = styled.div({
   display: 'grid',
@@ -16,7 +17,7 @@ export default () => {
   const productsData = useStaticQuery(
     graphql`
       query {
-        allStripePrice(filter: {product: {active: {eq: true}, metadata: {shipment: {ne: "true"}}}, active: {eq: true}}) {
+        allStripePrice(filter: {product: {active: {eq: true}}, active: {eq: true}}) {
           nodes {
             id
             currency
@@ -26,25 +27,46 @@ export default () => {
               name
               description
               images
+              metadata {
+                shipment
+              }
             }
           }
         }
       }`
   )
-  const prices: Price[]  = productsData.allStripePrice.nodes
+  const mapToProduct = (price: Price) => 
+  {
+    return {
+      id: price.id,
+      name: price.product.name,
+      price: price.unit_amount,
+      currency: price.currency,
+      description: price.product.description,
+      image: price.product.images,
+      isShipment: price.product.metadata.shipment == 'true'
+    }
+  }
+  const prices: Price[] = productsData.allStripePrice.nodes
+                            .filter((price: Price) => !price.product.metadata.shipment)
+  const shipment: Price = productsData.allStripePrice.nodes
+                            .filter((price: Price) => price.product.metadata.shipment)[0]
+  const cart = useShoppingCart()
+
+  const addShipping = (cart: ShoppingCartUtilities, shipment: Price) => {
+    cart.removeItem(shipment.id)
+    cart.addItem(mapToProduct(shipment) as any)
+  }
+                          
   return (
     <>
       <Products>
         {prices.map(price => {
-          const product = {
-            id: price.id,
-            name: price.product.name,
-            price: price.unit_amount,
-            currency: price.currency,
-            description: price.product.description,
-            image: price.product.images,
-          }
-          return <ProductCard key={price.id} product={product} />
+          const product = mapToProduct(price)
+          return <ProductCard key={price.id}
+                              product={product} 
+                              onAdd={(product) => {cart.addItem(product); addShipping(cart, shipment)}}
+                              />
         })}
       </Products>
     </>
