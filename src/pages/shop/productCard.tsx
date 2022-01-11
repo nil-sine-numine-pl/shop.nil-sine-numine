@@ -11,7 +11,7 @@ const Card = styled.div({
     img: {
         minWidth: '12rem',
         maxWidth: '12rem',
-        height: '11rem',
+        maxHeight: '14rem',
         objectFit: 'cover',
     }
   })
