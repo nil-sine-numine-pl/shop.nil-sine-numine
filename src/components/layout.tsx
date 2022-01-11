@@ -45,6 +45,9 @@ table {borderSpacing: 0};
 iframe {
   width: '100%';
 }
+h1 {
+  line-height: normal
+}
 a {
   color: ${Colors.font};
   text-decoration: none;
