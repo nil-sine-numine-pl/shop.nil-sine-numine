@@ -29,7 +29,10 @@ export default () =>
 
   return <>
     <Page style={{textAlign:"center"}}>
-        <Lined><H1>O Fundacji</H1></Lined>
+        <Lined><H1 onClick={async() => {
+            const response = await fetch('/.netlify/functions/hello-world').then(response => response.text())
+            console.log(response)}
+        }>O Fundacji</H1></Lined>
           <section dangerouslySetInnerHTML={{ __html: about }}></section>
           <Link to="/about/">
             <Button>WIĘCEJ O FUNDACJI</Button>
