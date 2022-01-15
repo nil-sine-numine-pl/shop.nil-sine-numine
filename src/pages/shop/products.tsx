@@ -39,6 +39,7 @@ export default () => {
   {
     return {
       id: price.id,
+      sku: price.id,
       name: price.product.name,
       price: price.unit_amount,
       currency: price.currency,
