@@ -72,16 +72,6 @@ export default (props: { cart: ShoppingCartUtilities, onClose: () => void }) => 
 
     return (
         <CartViewBox>
-                            <h1 onClick={async() => {
-                const response = await fetch('/.netlify/functions/hello-world', {
-                    method: 'post',
-                    headers: {'Content-Type': "application/json"},
-                    body: JSON.stringify(cartProducts)
-                }).then(response => response.json())
-                console.log(response)
-                //cart.redirectToCheckout({sessionId: response.sessionId})
-            }
-            }>sss</h1>
             <CartItemsTable>
                 <thead>
                     <tr>
@@ -123,9 +113,14 @@ export default (props: { cart: ShoppingCartUtilities, onClose: () => void }) => 
                 <Button onClick={cart.clearCart}>Wyczyść koszyk</Button>
                 <Button
                     disabled={loading || cartProducts.length == 0}
-                    onClick={() => {
+                    onClick={async() => {
                         setLoading(true)
-                        cart.redirectToCheckout()
+                        const response = await fetch('/.netlify/functions/pay', {
+                            method: 'post',
+                            headers: {'Content-Type': "application/json"},
+                            body: JSON.stringify(cartProducts)
+                        }).then(response => response.json())
+                        cart.redirectToCheckout({sessionId: response.sessionId})
                     }}>
                     {loading ? <Icon src={jumpingDots} alt="..." /> : 'Do zapłaty'}
                 </Button>
