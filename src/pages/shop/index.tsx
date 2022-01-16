@@ -22,15 +22,7 @@ export default () => {
   ).allMarkdownRemark.nodes[0].html
 
   return (
-    <CartProvider
-      mode="client-only"
-      stripe={getStripe()}
-      successUrl={`${isBrowser() && window.location.origin}/thanks/`}
-      cancelUrl={`${isBrowser() && window.location}`}
-      currency="PLN"
-      allowedCountries={['PL']}
-      billingAddressCollection={true}
-    >
+    <CartProvider mode="checkout-session" stripe={getStripe()} currency="PLN">
       <Page>
         <Lined><H1>Kawa i rękodzieła</H1></Lined>
         <div dangerouslySetInnerHTML={{ __html: shopInfo }}/>

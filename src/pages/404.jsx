@@ -4,7 +4,7 @@ import { Page } from "../components/page"
 
 export default function NotFoundPage() {
   return (
-    <Page>
+    <Page style={{marginTop:'0px'}}>
       <title>Not found</title>
       <h1>Nie odnaleziono strony</h1>
       <p>
