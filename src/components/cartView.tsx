@@ -115,12 +115,15 @@ export default (props: { cart: ShoppingCartUtilities, onClose: () => void }) => 
                     disabled={loading || cartProducts.length == 0}
                     onClick={async() => {
                         setLoading(true)
-                        const response = await fetch('/.netlify/functions/pay', {
+                        await fetch('/.netlify/functions/pay', {
                             method: 'post',
                             headers: {'Content-Type': "application/json"},
                             body: JSON.stringify(cartProducts)
-                        }).then(response => response.json())
-                        cart.redirectToCheckout({sessionId: response.sessionId})
+                        }).then(async httpResponse => {
+                            const response = await httpResponse.json()
+                            console.log(response.sessionId)
+                            cart.redirectToCheckout({sessionId: response.sessionId})
+                        })
                     }}>
                     {loading ? <Icon src={jumpingDots} alt="..." /> : 'Do zapłaty'}
                 </Button>
