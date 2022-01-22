@@ -5,7 +5,7 @@ exports.handler = async event => {
   let session
   try {
     session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card', 'p24'],
+      payment_method_types: ['p24', 'card'],
       billing_address_collection: 'auto',
       shipping_address_collection: {
         allowed_countries: ['PL']
@@ -18,6 +18,11 @@ exports.handler = async event => {
       },
       line_items: products.map(product => { return {price: product.id, quantity: product.quantity}}),
     })
+    console.log(session.id)
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ sessionId: session.id })
+    }
   } catch (error) {
     return {
       statusCode: 500,
@@ -26,9 +31,5 @@ exports.handler = async event => {
         error: error.message
       })
     }
-  }
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ sessionId: session.id })
   }
 }
