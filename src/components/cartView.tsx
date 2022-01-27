@@ -128,6 +128,6 @@ export default (props: { cart: ShoppingCartUtilities, onClose: () => void }) => 
                     {loading ? <Icon src={jumpingDots} alt="..." /> : 'Do zapłaty'}
                 </Button>
             </CartActions>
-            <small dangerouslySetInnerHTML={{ __html: cartInfo }} />
+            <small style={{textAlign: 'center'}} dangerouslySetInnerHTML={{ __html: cartInfo }} />
         </CartViewBox>)
 }

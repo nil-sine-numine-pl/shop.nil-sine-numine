@@ -2,4 +2,5 @@
 templateKey: none
 id: info-cart
 ---
-Dołożymy wszelkich starań, żeby Państwa zamówienie zostało wysłane następnego dnia roboczego. Po przejściu do płatności, zostaną Państwo poproszeni o podanie danych do wysyłki, które wykorzystamy wyłącznie do tego celu.
+Przy płatności, zostaną Państwo poproszeni o dane do wysyłki, które wykorzystamy wyłącznie do tego celu.
+Kontynuując, oświadczam, że zapoznałem się z <u><b><a href="https://www.przelewy24.pl/regulamin" target="_blank">regulaminem</a></b></u> i <u><b><a href="https://www.przelewy24.pl/obowiazek-informacyjny-rodo-platnicy" target="_blank">obowiązkiem informacyjnym</a></b></u> serwisu Przelewy24.
