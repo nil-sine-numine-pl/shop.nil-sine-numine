@@ -5,7 +5,7 @@ exports.handler = async event => {
   let session
   try {
     session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'], //'p24'],
+      payment_method_types: ['p24', 'card'],
       billing_address_collection: 'auto',
       shipping_address_collection: {
         allowed_countries: ['PL']
