@@ -36,6 +36,15 @@ export default () =>
           </Link>
         <Break/>
         <StaticImage src="../images/foundation.webp" alt="Manufaktura kawy" placeholder="blurred"  />
+        <Lined><H1>Jak możesz pomóc?</H1></Lined>
+<p style={{textAlign:"left"}}>
+1. Poprzez zapisanie swojego dziecka na wartościowy obóz letni <b><a target='_blank' href='https://obozydzieciece.pl'>obozydzieciece.pl</a></b><br/>
+2. Polecenie swoim znajomym naszych obozów<br/>
+3. Zakup naszej kawy-cegiełki <b><a href='/shop/'>#kawaktorapomaga</a></b><br/>
+4. Możesz też dokonać bezpośrednio wpłaty z dopiskiem : wpłata na utrzymanie kooperatywy
+pracowniczej w Rwandzie.
+</p><br/>
+<h2><a href='blog/jak-mozesz-pomoc/'>Przeczytaj o naszych projektach</a></h2>
         <Lined><H1>Manufaktura kawy</H1></Lined>
           <section dangerouslySetInnerHTML={{ __html: coffee }}></section>
         <Break/>
