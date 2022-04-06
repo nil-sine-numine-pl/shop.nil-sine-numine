@@ -61,6 +61,6 @@ Pyszna kawa na słodko, która składa się z filiżanki espresso lub innej mocn
 
 To espresso wzbogacone o aromat ze skórki cytrynowej. Do kawy dodaje się kawałek skórki cytrynowej bądź kilka kropel aromatu. Posiada ona unikalny smak.
 
-Jeśli chcecie przygotować swoją ulubiona kawę, zapraszamy na naszą zbiórką: [https://zrzutka.pl/vb6bau](https://www.blogger.com/#), gdzie za wsparcie dla dzieci z polskich i ukraińskich domów dziecka możecie otrzymać doskonałą kawę do rozkoszowania się w wersji solo i użyć jej jako bazy do Waszych lubianych napojów.
+Jeśli chcecie przygotować swoją ulubiona kawę, zapraszamy na naszą zbiórką: **<https://zrzutka.pl/vb6bau>**, gdzie za wsparcie dla dzieci z polskich i ukraińskich domów dziecka możecie otrzymać doskonałą kawę do rozkoszowania się w wersji solo i użyć jej jako bazy do Waszych lubianych napojów.
 
 ![](rodzaje-kawy-numine.pl.png)
