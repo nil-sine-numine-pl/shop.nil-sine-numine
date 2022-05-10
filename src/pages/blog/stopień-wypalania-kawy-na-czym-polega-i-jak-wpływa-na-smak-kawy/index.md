@@ -36,7 +36,7 @@ Stopnie palenia kawy zależą od czasu przebywania kawy w piecu. Im więcej ziar
 
 **Stopień wypalania kawy - który najlepszy?**
 
-Z gustami i preferencjami nie dyskutuje się, więc każdy powinien zdecydować indywidualnie jaką kawę woli. Jeśli chcecie spróbować naszej gładkiej i przyjemnie otulającej podniebienie kawy, to zapraszamy do sklepu >> [tu](https://numine.pl/shop/) lub do wsparcia zbiórki >> [tu](https://zrzutka.pl/vb6bau). #KAWAKTORAPOMAGA charakteryzuje się następującymi nutami smakowymi: lekko cytrynowe, po przestygnięciu wyczuwalna wiśnia i suszone owoce, w tym żurawina. Aromat naszych ziaren jest intensywny, orzeźwiający oraz lekko słodki. Smacznego! A jaką kawę Wy pijecie?
+Z gustami i preferencjami nie dyskutuje się, więc każdy powinien zdecydować indywidualnie jaką kawę woli. Jeśli chcecie spróbować naszej gładkiej i przyjemnie otulającej podniebienie kawy, to zapraszamy do sklepu >> **[tu](https://numine.pl/shop/)** lub do wsparcia zbiórki >> **[tu](https://zrzutka.pl/vb6bau)**. #KAWAKTORAPOMAGA charakteryzuje się następującymi nutami smakowymi: lekko cytrynowe, po przestygnięciu wyczuwalna wiśnia i suszone owoce, w tym żurawina. Aromat naszych ziaren jest intensywny, orzeźwiający oraz lekko słodki. Smacznego! A jaką kawę Wy pijecie?
 
 <!--EndFragment-->
 
