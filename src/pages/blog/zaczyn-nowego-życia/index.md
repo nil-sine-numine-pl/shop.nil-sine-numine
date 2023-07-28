@@ -15,3 +15,7 @@ W programie zaplanowano :
 4. zajęcia rekreacyjne  oraz relaksujące 
 
 Program dofinansował Urząd Miasta Bielsk Podlaski w kwocie 5000 zł. Dziękujemy!
+
+![](358666984_754238460035553_8511250136734092723_n.jpg)
+
+![](358666984_754238460035553_8511250136734092723_n.jpg)
